@@ -49,6 +49,7 @@ const Modal = ({
         <ReactFocusLock>
           <div className="relative" ref={modalRef}>
             <button
+              name="close"
               className="hidden sm:block z-20 p-2 bg-sky-500 text-slate-100 dark:text-slate-900 rounded absolute right-8 top-8"
               onClick={onClose}
             >

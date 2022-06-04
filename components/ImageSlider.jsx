@@ -49,12 +49,14 @@ const ImageSlider = ({ images }) => {
       {images.length > 1 && (
         <>
           <button
+            name="next image"
             onClick={() => slideImage(-1)}
             className="hidden only-hover:block p-1 text-sky-500 text-2xl absolute top-1/2 right-0 transform -translate-y-1/2"
           >
             <RiArrowRightSLine />
           </button>
           <button
+            name="previous image"
             onClick={() => slideImage(1)}
             className="hidden only-hover:block p-1 text-sky-500 text-2xl absolute top-1/2 left-0 transform -translate-y-1/2"
           >

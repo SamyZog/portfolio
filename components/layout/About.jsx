@@ -13,11 +13,11 @@ const About = ({
       <h1>{`#${id}`}</h1>
       <hr />
       <ReactMarkdown>{content}</ReactMarkdown>
-      <div className="columns-2 sm:columns-3 prose-li:font-semibold prose-li:text-sm">
+      <ul className="columns-2 sm:columns-3 prose-li:font-semibold prose-li:text-sm">
         {items.sort().map((technology) => (
           <li className="m-0 mb-2" key={technology}>{technologies[technology].label}</li>
         ))}
-      </div>
+      </ul>
     </div>
   </motion.section>
 );
