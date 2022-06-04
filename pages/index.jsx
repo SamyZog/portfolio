@@ -43,6 +43,7 @@ const HomePageQuery = gql`
           description
           tech
           images {
+            alt
             width
             height
             id
@@ -138,7 +139,7 @@ const Home = ({
         />
       </motion.main>
       <motion.footer variants={animations} className="py-5 w-screen">
-        <ul className="flex justify-center items-center p-0 space-x-5">
+        <div className="flex justify-center items-center p-0 space-x-5">
           {socialLinks.map((link) => {
             const Icon = socialData[link.platform];
 
@@ -149,17 +150,19 @@ const Home = ({
                 href={link.url}
                 target="_blank"
                 rel="noreferrer"
+                title={link.platform}
               >
-                <Icon size={25} />
+                <Icon size={25} title={link.platform} />
               </a>
             );
           })}
-        </ul>
+        </div>
         <p className="w-full text-center text-sky-500 font-medium m-0 mt-5">
           {signature}
         </p>
       </motion.footer>
       <motion.button
+        name="scroll to top"
         onClick={scrollToTop}
         custom={trigger}
         initial={{ scale: 0 }}

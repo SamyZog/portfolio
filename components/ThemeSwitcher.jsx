@@ -16,6 +16,7 @@ const ThemeSwitcher = (props) => {
 
   return (
     <motion.button
+      name="switch theme"
       onClick={() => toggleScheme()}
       className="p-2 bg-slate-900 overflow-hidden dark:bg-slate-100 text-slate-100 dark:text-slate-900 rounded"
       {...props}

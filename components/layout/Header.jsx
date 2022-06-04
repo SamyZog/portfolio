@@ -55,6 +55,7 @@ const Header = ({
             className="p-4 max-w-screen-md w-full flex justify-between items-center"
           >
             <motion.button
+              name="open drawer"
               variants={animations.container}
               onClick={handleDrawerOpen}
               className="block xs:hidden text-slate-900 dark:text-slate-100 rounded"

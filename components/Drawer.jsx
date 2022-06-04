@@ -57,6 +57,7 @@ const Drawer = ({
               </a>
             </Link>
             <button
+              name="close drawer"
               className="p-2 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900 rounded"
               onClick={onClose}
             >
@@ -80,7 +81,7 @@ const Drawer = ({
             </nav>
           </div>
           <div className="flex flex-col p-4 flex-1 h-full justify-end space-y-5">
-            <ul className="flex justify-center items-center p-0 space-x-5">
+            <div className="flex justify-center items-center p-0 space-x-5">
               {socialLinks?.map((link) => {
                 const Icon = socialData[link.platform];
 
@@ -91,12 +92,13 @@ const Drawer = ({
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
+                    title={link.platform}
                   >
-                    <Icon size={25} />
+                    <Icon size={25} title={link.platform} />
                   </a>
                 );
               })}
-            </ul>
+            </div>
             <p className="w-full text-center text-sky-500 font-medium m-0">{signature}</p>
           </div>
         </div>

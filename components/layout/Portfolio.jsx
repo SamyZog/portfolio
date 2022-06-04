@@ -50,13 +50,13 @@ const Portfolio = ({
                   <h2 className="m-0 truncate">{title}</h2>
                   <div className="flex items-center space-x-2">
                     {demoUrl && (
-                    <a href={demoUrl} target="_blank" rel="noreferrer">
-                      <IoOpenOutline size={20} />
+                    <a href={demoUrl} target="_blank" rel="noreferrer" title="Demo">
+                      <IoOpenOutline size={20} title="Demo" />
                     </a>
                     )}
                     {sourceUrl && (
-                    <a href={sourceUrl} target="_blank" rel="noreferrer">
-                      <SiGithub size={20} />
+                    <a href={sourceUrl} target="_blank" rel="noreferrer" title="Source">
+                      <SiGithub size={20} title="Github" />
                     </a>
                     )}
                   </div>
@@ -64,6 +64,7 @@ const Portfolio = ({
                 <hr />
                 {imageUrl ? (
                   <button
+                    name={`open image preview for project: ${title}`}
                     className="block relative"
                     onClick={() => handleDialogOpen(index)}
                   >
