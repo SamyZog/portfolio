@@ -162,6 +162,7 @@ const Home = ({
       <motion.button
         onClick={scrollToTop}
         custom={trigger}
+        initial={{ scale: 0 }}
         animate={(custom) => ({ scale: custom ? 1 : 0 })}
         className="fixed bottom-4 right-4 p-2 bg-slate-900 dark:bg-slate-100 text-slate-100 dark:text-slate-900 rounded-full"
       >
