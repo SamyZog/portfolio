@@ -6,15 +6,36 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "framer-motion": "^6.3.5",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.2.0",
     "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-focus-lock": "^2.9.1",
+    "react-icons": "^4.3.1",
+    "react-markdown": "^8.0.3",
+    "react-swipeable": "^7.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.7",
     "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.1.6",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.2",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "npm run lint"
   }
 }
