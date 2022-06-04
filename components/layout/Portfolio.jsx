@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoOpenOutline } from "react-icons/io5";
 import { SiGithub } from "react-icons/si";
-import Modal from "./Modal";
+import Modal from "../Modal";
 
 const Portfolio = ({
   id,
