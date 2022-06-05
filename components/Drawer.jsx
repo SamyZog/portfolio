@@ -122,6 +122,7 @@ const Drawer = ({
       <motion.div
         custom={open}
         animate={animations.overlay}
+        initial={{ opacity: 0 }}
         className="z-40 block sm:hidden pointer-events-none duration-300 fixed inset-0 w-screen h-screen bg-opacity-75 bg-slate-900"
       />
     </ReactFocusLock>
