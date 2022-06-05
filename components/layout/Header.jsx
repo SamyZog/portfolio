@@ -38,6 +38,17 @@ const Header = ({
 
   const handleDrawerClose = () => setOpen(false);
 
+  const shareUrl = async () => {
+    try {
+      navigator.share({
+        url: window.location.hostname,
+      });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn(error);
+    }
+  };
+
   return (
     <>
       <motion.header
@@ -79,6 +90,13 @@ const Header = ({
                   {link.label}
                 </motion.a>
               ))}
+              <motion.button
+                onClick={shareUrl}
+                variants={animations.container}
+                className="capitalize text-sm font-semibold dark:text-slate-100 text-slate-900"
+              >
+                share
+              </motion.button>
             </nav>
             <ThemeSwitcher variants={animations.container} />
           </motion.div>

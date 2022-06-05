@@ -27,6 +27,17 @@ const Drawer = ({
     onSwipedLeft: () => onClose(),
   });
 
+  const shareUrl = async () => {
+    try {
+      navigator.share({
+        url: window.location.hostname,
+      });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.warn(error);
+    }
+  };
+
   useEffect(() => {
     drawerRef.current.style.minHeight = `${window.innerHeight}px`;
 
@@ -78,6 +89,13 @@ const Drawer = ({
                   {link.label}
                 </a>
               ))}
+              <motion.button
+                onClick={shareUrl}
+                variants={animations.container}
+                className="capitalize font-medium dark:text-slate-100 text-slate-900"
+              >
+                share
+              </motion.button>
             </nav>
           </div>
           <div className="flex flex-col p-4 flex-1 h-full justify-end space-y-5">
