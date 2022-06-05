@@ -30,7 +30,7 @@ const Drawer = ({
   const shareUrl = async () => {
     try {
       navigator.share({
-        url: window.location.hostname,
+        url: "https://www.samzog.dev",
       });
     } catch (error) {
       // eslint-disable-next-line no-console
