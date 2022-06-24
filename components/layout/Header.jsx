@@ -28,7 +28,6 @@ const Header = ({
   navLinks,
   signature,
   socialLinks,
-  alert,
 }) => {
   const trigger = useScrollTrigger();
 
