@@ -55,7 +55,6 @@ const Header = ({
         animate={animations.header}
         transition={{ type: "tween" }}
       >
-        {alert?.content && <p className="p-2 bg-black text-white m-0 text-center">{alert.content}</p>}
         <div className="flex items-center justify-center">
           <motion.div
             variants={animations.container}
