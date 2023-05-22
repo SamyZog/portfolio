@@ -1,20 +1,20 @@
 {
-  "short_name": "Front-End Web Developer",
+  "background_color": "#1e1b4b",
+  "display": "standalone",
   "icons": [
     {
-      "src": "/favicon/android-chrome-192x192.png",
       "sizes": "192x192",
+      "src": "/android-chrome-192x192.png",
       "type": "image/png"
     },
     {
-      "src": "/favicon/android-chrome-512x512.png",
       "sizes": "512x512",
+      "src": "/android-chrome-512x512.png",
       "type": "image/png"
     }
   ],
-  "name": "Samy Zogeyb | Front-End Web Developer",
-  "start_url": "https://www.samzog.dev",
-  "theme_color": "#0f172a",
-  "background_color": "#0f172a",
-  "display": "standalone"
+  "name": "SamZog",
+  "short_name": "SamZog",
+  "them_color": "#1e1b4b",
+  "theme_color": "#1e1b4b"
 }

@@ -1,28 +1,30 @@
 /* eslint-disable import/no-extraneous-dependencies */
-const typography = require("@tailwindcss/typography");
-const aspectRatio = require("@tailwindcss/aspect-ratio");
 
+const typography = require('@tailwindcss/typography');
+const aspectRatio = require('@tailwindcss/aspect-ratio');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
-    fontFamily: {
-      sans: "Inter",
-      mono: "JetBrains Mono",
-    },
     screens: {
-      xs: "480px",
-      sm: "600px",
-      md: "768px",
-      lg: "900px",
-      xl: "1200px",
-      "2xl": "1536px",
-      "only-hover": { raw: "(hover: hover)" },
+      xs: '475px',
+      ...defaultTheme.screens,
     },
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+    },
   },
-  plugins: [typography, aspectRatio],
+  plugins: [
+    typography,
+    aspectRatio,
+  ],
 };

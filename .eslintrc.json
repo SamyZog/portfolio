@@ -1,19 +1,26 @@
 {
-  "extends": ["airbnb", "next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "airbnb", "airbnb/hooks"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:tailwindcss/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
+  ],
   "rules": {
-    "consistent-return": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off",
+    "react/jsx-props-no-spreading": "off",
     "import/prefer-default-export": "off",
     "linebreak-style": "off",
-    "padding-line-between-statements": [
-      "error",
-      {
-        "blankLine": "always",
-        "next": "return",
-        "prev": "*"
-      }
-    ],
-    "quotes": ["error", "double"],
-    "react/button-has-type": "off",
+    "react/react-in-jsx-scope": "off",
     "react/function-component-definition": [
       "error",
       {
@@ -21,14 +28,12 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "react/jsx-props-no-spreading": "off"
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx"],
-        "moduleDirectory": ["node_modules", "."]
+    "tailwindcss/classnames-order": [
+      2,
+      {
+        "callees": ["ctl", "clsx", "activeClassname"],
+        "prependCustom": true
       }
-    }
+    ]
   }
 }

@@ -1,13 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ["media.graphassets.com"],
-  },
-  i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
-  },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);
