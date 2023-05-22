@@ -30,7 +30,7 @@ const socialLinks = [
 export const SocialLinks = () => (
   <>
     {socialLinks.map((link) => (
-      <a className="duration-200 hover:text-indigo-500" key={link.url} href={link.url} target="_blank" rel="noreferrer">
+      <a aria-label={link.title} className="duration-200 hover:text-indigo-500" key={link.url} href={link.url} target="_blank" rel="noreferrer">
         <link.icon fontSize={20} title={link.title} />
       </a>
     ))}

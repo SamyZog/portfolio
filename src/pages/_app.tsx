@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }: AppProps) => (
   <main className={`${inter.className} prose prose-sm prose-slate mx-auto grid w-full max-w-2xl grid-cols-1 py-4 dark:prose-invert prose-a:no-underline prose-hr:my-3 md:grid-cols-[20%_80%] md:py-24`}>
 
     <nav className="top-24 flex items-center space-x-2 self-start md:sticky md:flex-col md:items-start md:space-x-0 md:space-y-2">
-      <Link href="/">
+      <Link href="/" aria-label="home page">
         <Logo size={60} className="px-3" />
       </Link>
 
