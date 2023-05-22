@@ -6,6 +6,7 @@ const About = () => (
   <>
     <Head>
       <title>Samy Zogeyb | About</title>
+      <meta name="description" content="Experienced Front-End Engineer" />
     </Head>
 
     <section>

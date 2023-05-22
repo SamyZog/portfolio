@@ -5,6 +5,7 @@ const Blog = () => (
   <>
     <Head>
       <title>Samy Zogeyb | Blog</title>
+      <meta name="description" content="Personal blog, still under construction" />
     </Head>
 
     <section>

@@ -5,6 +5,7 @@ const Home = () => (
   <>
     <Head>
       <title>Samy Zogeyb</title>
+      <meta name="description" content="I am Samy Zogeyb, an experienced Software Engineer" />
     </Head>
 
     <section>

@@ -11,6 +11,7 @@ const Work = () => (
   <>
     <Head>
       <title>Samy Zogeyb | Work</title>
+      <meta name="description" content="My experience, career, and side projects" />
     </Head>
 
     <section>
