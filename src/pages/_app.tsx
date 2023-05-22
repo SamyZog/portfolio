@@ -18,6 +18,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       </Link>
 
       <NavLink
+        aria-label="home page"
         href="/"
         className={clsx(
           'hover:bg-slate-100',
@@ -35,6 +36,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       </NavLink>
 
       <NavLink
+        aria-label="about page"
         href="/about"
         className={clsx(
           'hover:bg-slate-100',
@@ -52,6 +54,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       </NavLink>
 
       <NavLink
+        aria-label="work page"
         href="/work"
         className={clsx(
           'hover:bg-slate-100',
@@ -69,6 +72,7 @@ const App = ({ Component, pageProps }: AppProps) => (
       </NavLink>
 
       <NavLink
+        aria-label="blog page"
         href="/blog"
         className={clsx(
           'hover:bg-slate-100',
