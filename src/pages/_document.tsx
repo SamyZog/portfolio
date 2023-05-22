@@ -8,6 +8,18 @@ import Script from 'next/script';
 const Document = () => (
   <Html lang="en">
     <Head>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CG35LVJ7D" />
+      <script dangerouslySetInnerHTML={{
+        __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-5CG35LVJ7D');
+      `,
+      }}
+      />
+
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
@@ -17,6 +29,8 @@ const Document = () => (
       <meta name="application-name" content="SamZog" />
       <meta name="msapplication-TileColor" content="#1e1b4b" />
       <meta name="theme-color" content="#1e1b4b" />
+
+      <meta name="yandex-verification" content="7d180a4548605c30" />
 
       <meta name="robots" content="index,follow" />
 
@@ -33,18 +47,6 @@ const Document = () => (
       <meta property="og:image:height" content="600" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:site_name" content="Samy Zogeyb's Portfolio" />
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CG35LVJ7D" />
-      <script dangerouslySetInnerHTML={{
-        __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-5CG35LVJ7D');
-      `,
-      }}
-      />
 
     </Head>
     <body>
