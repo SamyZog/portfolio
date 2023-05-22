@@ -24,6 +24,7 @@ const socialLinks = [
   {
     url: 'mailto:samyzogeyb@gmail.com',
     icon: SiGmail,
+    title: 'Gmail',
   },
 ];
 
