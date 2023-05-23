@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap",
+    "postbuild": "",
     "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
