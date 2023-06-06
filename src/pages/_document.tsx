@@ -40,7 +40,7 @@ const Document = () => (
       <meta property="og:description" content="Software Engineer, Front-End Developer" />
       <meta property="og:url" content="https://samzog.dev/" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" itemprop="image" content="/og-logo.png" />
+      <meta property="og:image" itemProp="image" content="/og-logo.png" />
       <meta property="og:image:alt" content="Samy Zogeyb Logo" />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="800" />
