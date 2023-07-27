@@ -84,7 +84,6 @@ const App = ({ Component, pageProps }: AppProps) => (
           'dark:bg-slate-900',
           'md:translate-x-3',
           'translate-x-0',
-
         )}
       >
         Blog
@@ -101,6 +100,8 @@ const App = ({ Component, pageProps }: AppProps) => (
           'font-semibold',
           'lowercase',
           'duration-200',
+          'whitespace-nowrap',
+          'overflow-hidden',
         )}
         href="/Resume-Samy-Zogeyb.pdf"
         download
