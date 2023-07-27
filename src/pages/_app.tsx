@@ -84,10 +84,29 @@ const App = ({ Component, pageProps }: AppProps) => (
           'dark:bg-slate-900',
           'md:translate-x-3',
           'translate-x-0',
+
         )}
       >
         Blog
       </NavLink>
+
+      <a
+        className={clsx(
+          'hover:bg-slate-100',
+          'dark:hover:bg-slate-900',
+          'rounded-md',
+          'px-3',
+          'py-1',
+          'text-sm',
+          'font-semibold',
+          'lowercase',
+          'duration-200',
+        )}
+        href="/Resume-Samy-Zogeyb.pdf"
+        download
+      >
+        RESUME ⬇️
+      </a>
 
       <div className="hidden grid-cols-2 gap-4 p-3 !text-indigo-500 md:grid">
         <SocialLinks />
@@ -96,6 +115,7 @@ const App = ({ Component, pageProps }: AppProps) => (
 
     <div className="mb-10 flex grid-cols-2 items-center gap-4 p-3 !text-indigo-500 md:hidden">
       <SocialLinks />
+
     </div>
 
     <div className="p-3 pt-2 prose-a:font-bold prose-a:text-indigo-500 md:p-1">
