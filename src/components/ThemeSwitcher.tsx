@@ -30,8 +30,8 @@ export const ThemeSwitcher = () => {
   return (
     <button onClick={toggleMode} type="button" aria-label="theme switcher">
       {isDark
-        ? <IoMdMoon fontSize="20px" className="animate-pulse text-slate-400" />
-        : <IoMdSunny fontSize="20px" className="animate-spin-slow text-yellow-500" />}
+        ? <IoMdSunny fontSize="20px" className="animate-spin-slow text-yellow-500" />
+        : <IoMdMoon fontSize="20px" className="animate-pulse text-slate-400" />}
     </button>
   );
 };
