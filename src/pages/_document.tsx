@@ -8,7 +8,7 @@ import Script from 'next/script';
 const Document = () => (
   <Html lang="en">
     <Head>
-      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CG35LVJ7D" />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CG35LVJ7D" />
       <script dangerouslySetInnerHTML={{
         __html: `
         window.dataLayer = window.dataLayer || [];
@@ -18,7 +18,7 @@ const Document = () => (
         gtag('config', 'G-5CG35LVJ7D');
       `,
       }}
-      /> */}
+      />
 
       <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
