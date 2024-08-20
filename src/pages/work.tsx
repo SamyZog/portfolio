@@ -228,9 +228,7 @@ const Work = () => (
           )}
           >
             <h3 className={clsx('m-0')}>
-              Front-End Developer at
-              {' '}
-              <a href="https://coin32.com/" target="_blank" rel="noreferrer">Coin32</a>
+              Front-End Developer at Software Company (NDA)
             </h3>
 
             <p>
