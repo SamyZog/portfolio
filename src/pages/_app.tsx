@@ -93,26 +93,6 @@ const App = ({ Component, pageProps }: AppProps) => (
         Blog
       </NavLink>
 
-      <a
-        className={clsx(
-          'hover:bg-slate-100',
-          'dark:hover:bg-slate-900',
-          'rounded-md',
-          'px-3',
-          'py-1',
-          'text-sm',
-          'font-semibold',
-          'lowercase',
-          'duration-200',
-          'whitespace-nowrap',
-          'overflow-hidden',
-        )}
-        href="/Resume-Samy-Zogeyb.pdf"
-        download
-      >
-        RESUME ⬇️
-      </a>
-
       <div className="hidden grid-cols-2 gap-4 p-3 !text-indigo-500 md:grid">
         <SocialLinks />
       </div>
