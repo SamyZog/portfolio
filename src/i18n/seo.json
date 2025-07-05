@@ -1,0 +1,36 @@
+{
+  "en": {
+    "home": {
+      "title": "Samy Zogeyb Frontend Developer",
+      "description": "I'm an experienced Frontend Developer with a deep focus on building scalable, high-performance web applications using modern technologies. My primary stack includes React, Next.js, and TypeScript, along with a strong command of state management tools like Redux Toolkit, Zustand, and React Query. I'm highly experienced with asynchronous data handling, SSR/SSG, and real-time updates via tools like WebSockets.",
+      "ogDescription": "I am an experienced Frontend Developer with a deep focus on building scalable, high-performance web applications using modern tech."
+    },
+    "resume": {
+      "title": "Resume",
+      "ogTitle": "Samy Zogeyb Frontend | Resume",
+      "description": "Samy Zogeyb Frontend | Resume. My experience and projects I have worked on.",
+      "ogDescription": "My experience and projects I have worked on."
+    },
+    "not-found": {
+      "title": "This is not the page you are looking for!",
+      "action": "This is not the page I am looking for!"
+    }
+  },
+  "ru": {
+    "home": {
+      "title": "Сами Зогейб Фронтенд Разработчик",
+      "description": "Я фронтенд-разработчик с многолетним опытом в создании сложных и производительных веб-приложений. Основной стек — React, Next.js и TypeScript. В работе активно использую современные подходы к управлению состоянием (Redux Toolkit, Zustand, React Query), умею эффективно работать с асинхронными процессами, SSR/SSG, а также real-time обновления (WebSocket, socket.io).",
+      "ogDescription": "Я фронтенд-разработчик с многолетним опытом в создании сложных и производительных веб-приложений."
+    },
+    "resume": {
+      "title": "Резюме",
+      "ogTitle": "Сами Зогейб Фронтенд | Резюме",
+      "description": "Сами Зогейб Фронтенд | Резюме. Опыт и проекты над которыми я работал.",
+      "ogDescription": "Мой опыт и проекты над которыми я работал."
+    },
+    "not-found": {
+      "title": "Эта не та страница которую вы ищете!",
+      "action": "Эта не та страница которую Я ищу!"
+    }
+  }
+}

@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.samzog.dev
-
-# Sitemaps
-Sitemap: https://www.samzog.dev/sitemap.xml

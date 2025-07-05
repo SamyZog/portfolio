@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(1.953125,0,0,1.953125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_139_541)">
+<path d="M512 208H408V421H512V208Z" fill="#0B0809"></path>
+<path d="M104 43H0L1.86211e-05 256H104V43Z" fill="#0B0809"></path>
+<path d="M0 0L256 75.786V181.195L0 105.409V0Z" fill="#0B0809"></path>
+<path d="M0 165L256 240.786V346.195L0 270.409V165Z" fill="#0B0809"></path>
+<path d="M0 330L256 405.786V511.195L0 435.409V330Z" fill="#0B0809"></path>
+<path d="M256 511.195L512 435.409V330L256 405.786V511.195Z" fill="#0B0809"></path>
+<path d="M256 346.195L512 270.409V165L256 240.786V346.195Z" fill="#0B0809"></path>
+<path d="M256 181.195L512 105.409V0L256 75.786V181.195Z" fill="#0B0809"></path>
+</g>
+<defs>
+<clipPath id="clip0_139_541">
+<rect width="512" height="512" fill="white"></rect>
+</clipPath>
+</defs>
+</svg></svg></g></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g><g transform="matrix(1.953125,0,0,1.953125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_139_540)">
+<path d="M512 208H408V421H512V208Z" fill="#FAFAFA"></path>
+<path d="M104 43H0L1.86211e-05 256H104V43Z" fill="#FAFAFA"></path>
+<path d="M0 0L256 75.786V181.195L0 105.409V0Z" fill="#FAFAFA"></path>
+<path d="M0 165L256 240.786V346.195L0 270.409V165Z" fill="#FAFAFA"></path>
+<path d="M0 330L256 405.786V511.195L0 435.409V330Z" fill="#FAFAFA"></path>
+<path d="M256 511.195L512 435.409V330L256 405.786V511.195Z" fill="#FAFAFA"></path>
+<path d="M256 346.195L512 270.409V165L256 240.786V346.195Z" fill="#FAFAFA"></path>
+<path d="M256 181.195L512 105.409V0L256 75.786V181.195Z" fill="#FAFAFA"></path>
+</g>
+<defs>
+<clipPath id="clip0_139_540">
+<rect width="512" height="512" fill="white"></rect>
+</clipPath>
+</defs>
+</svg></svg></g></g></svg></g></svg>
