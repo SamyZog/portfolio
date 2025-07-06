@@ -53,7 +53,7 @@ const Page = async () => {
   const { companies, h1 } = translations.resume;
 
   return (
-    <article className="flex-1 ml-5">
+    <article className="flex-1">
       <div className="flex items-center justify-between gap-2">
         <h1 className="text-2xl">{h1.title}</h1>
 
@@ -172,7 +172,10 @@ const Page = async () => {
                           <ol>
                             {achievements.map((achievement) => {
                               return (
-                                <li className="list-disc" key={achievement}>
+                                <li
+                                  className="list-disc ml-5"
+                                  key={achievement}
+                                >
                                   {achievement}
                                 </li>
                               );
