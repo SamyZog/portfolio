@@ -84,6 +84,21 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
 
   return (
     <html lang={locale} suppressHydrationWarning style={{ fontSize }}>
+      <head>
+        <noscript>
+          <div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://mc.yandex.ru/watch/103213439"
+              style={{
+                position: "absolute",
+                left: "-9999px",
+              }}
+              alt=""
+            />
+          </div>
+        </noscript>
+      </head>
       <body
         className={`${font.className} antialiased min-h-screen overflow-x-hidden`}
       >
@@ -134,19 +149,6 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
       </body>
       <GoogleTagManager gtmId="G-NLE3S9XNBJ" />
       <Script src="/metrics/yaMetrika.js" />
-      <noscript>
-        <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://mc.yandex.ru/watch/103213439"
-            style={{
-              position: "absolute",
-              left: "-9999px",
-            }}
-            alt=""
-          />
-        </div>
-      </noscript>
     </html>
   );
 };
