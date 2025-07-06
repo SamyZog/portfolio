@@ -19,7 +19,7 @@ export const MobileNavMenu = ({ fontSize }: { fontSize: string }) => {
 
   return (
     <header className="md:hidden p-5">
-      <nav className="pb-10">
+      <nav>
         <div className="flex items-center gap-2">
           <div className="ml-auto flex items-center justify-self-end">
             <ThemeSwitcher />
