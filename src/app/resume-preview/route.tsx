@@ -1,21 +1,16 @@
 import { renderToStream } from "@react-pdf/renderer";
-import { NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server";
 
 import { Resume } from "@/components/resume";
-import { getUserLocale } from "@/i18n/locale";
+import { type Locale, locales } from "@/i18n/config";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const GET = async (request: NextRequest) => {
+  const searchParams = request.nextUrl.searchParams;
+  const query = searchParams.get("lang") as Locale;
 
-export const GET = async () => {
-  const locale = await getUserLocale();
+  const loc = locales.includes(query) ? query : "en";
 
-  const stream = await renderToStream(<Resume locale={locale} />);
+  const stream = await renderToStream(<Resume locale={loc} />);
 
-  return new NextResponse(stream as unknown as ReadableStream, {
-    headers: {
-      "Content-Type": "application/pdf",
-      "Cache-Control": "no-store, max-age=0",
-    },
-  });
+  return new NextResponse(stream as unknown as ReadableStream);
 };

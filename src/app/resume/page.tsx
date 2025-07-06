@@ -61,7 +61,10 @@ const Page = async () => {
           <DownloadPDF locale={locale}>{h1.action}</DownloadPDF>
 
           <Button asChild>
-            <Link href={paths["resume-preview"]} target="_blank">
+            <Link
+              href={`${paths["resume-preview"]}?lang=${locale}`}
+              target="_blank"
+            >
               {h1.preview}
             </Link>
           </Button>
