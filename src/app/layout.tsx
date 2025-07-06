@@ -1,5 +1,6 @@
 import "@/css/globals.css";
 
+import { GoogleTagManager } from "@next/third-parties/google";
 import { IconChevronsRight } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
@@ -127,6 +128,7 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
           </ThemeProvider>
         </LocaleProvider>
       </body>
+      <GoogleTagManager gtmId="G-NLE3S9XNBJ" />
     </html>
   );
 };
