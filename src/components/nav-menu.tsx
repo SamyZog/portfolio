@@ -21,7 +21,7 @@ export const NavMenu = ({ fontSize }: { fontSize: string }) => {
   return (
     <nav className="w-20">
       <div className="flex justify-center w-full">
-        <Link href={paths.home} className="size-10">
+        <Link href={paths.home} className="size-10" aria-label="logo">
           <Logo />
         </Link>
       </div>

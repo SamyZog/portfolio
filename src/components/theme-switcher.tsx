@@ -11,6 +11,7 @@ const ThemeSwitcherComponent = () => {
 
   return (
     <Button
+      aria-label="theme switch"
       variant="ghost"
       onClick={() => {
         setTheme(resolvedTheme === "dark" ? "light" : "dark");
