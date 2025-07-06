@@ -1,26 +1,13 @@
 import "@/css/globals.css";
 
 import { GoogleTagManager } from "@next/third-parties/google";
-import { IconChevronsRight } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
-import Link from "next/link";
 import Script from "next/script";
 import type { PropsWithChildren } from "react";
 
-import { FontToggle } from "@/components/font-toggle";
-import { LocaleSwitcher } from "@/components/locale-switcher";
-import { Logo } from "@/components/logo";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTrigger,
-} from "@/components/sheet";
-import { ThemeSwitcher } from "@/components/theme-switcher";
+import { MobileNavMenu } from "@/components/mobile-nav-menu";
 import { font } from "@/constants/fonts";
-import { paths } from "@/constants/paths";
 import { getUserLocale } from "@/i18n/locale";
 import seo from "@/i18n/seo.json";
 import { LocaleProvider } from "@/providers/locale-provider";
@@ -104,45 +91,13 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
       >
         <LocaleProvider locale={locale}>
           <ThemeProvider>
+            <MobileNavMenu fontSize={fontSize} />
             <main className="realtive flex items-baseline max-w-4xl mx-auto gap-10 py-10 px-5">
               <aside className="sticky top-10 md:block hidden">
                 <NavMenu fontSize={fontSize} />
               </aside>
 
-              <section className="flex-1 relative">
-                <Sheet key={locale}>
-                  <SheetTrigger
-                    className="fixed top-0 left-0 bg-background p-1 md:hidden"
-                    aria-label="menu-button"
-                  >
-                    <IconChevronsRight />
-                  </SheetTrigger>
-                  <SheetContent side="left" className="!w-auto pt-5">
-                    <SheetHeader>
-                      <SheetDescription>
-                        <NavMenu fontSize={fontSize} />
-                      </SheetDescription>
-                    </SheetHeader>
-                  </SheetContent>
-                </Sheet>
-
-                <div className="md:hidden">
-                  <div className="flex justify-between">
-                    <FontToggle fontSize={fontSize} />
-
-                    <div className="flex items-center">
-                      <ThemeSwitcher />
-                      <LocaleSwitcher />
-                    </div>
-                  </div>
-
-                  <Link href={paths.home} className="size-10 md:hidden">
-                    <Logo className="size-20 mb-5 mx-auto" aria-label="logo" />
-                  </Link>
-                </div>
-
-                {children}
-              </section>
+              <section className="flex-1 relative">{children}</section>
             </main>
           </ThemeProvider>
         </LocaleProvider>

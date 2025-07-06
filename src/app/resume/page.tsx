@@ -1,4 +1,4 @@
-import { IconExternalLink } from "@tabler/icons-react";
+import { IconExternalLink, IconEye } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -54,10 +54,10 @@ const Page = async () => {
 
   return (
     <article className="flex-1 ml-5">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2">
         <h1 className="text-2xl">{h1.title}</h1>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap justify-end">
           <DownloadPDF locale={locale}>{h1.action}</DownloadPDF>
 
           <Button asChild>
@@ -66,6 +66,8 @@ const Page = async () => {
               target="_blank"
             >
               {h1.preview}
+
+              <IconEye />
             </Link>
           </Button>
         </div>
