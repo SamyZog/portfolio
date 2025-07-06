@@ -6,9 +6,9 @@
     },
     "about-me": {
       "h1": "Hello, I'm Samy!",
-      "p1": "I'm an experienced Frontend Developer with a deep focus on building scalable, high-performance web applications using modern technologies. My primary stack includes React, Next.js, and TypeScript, along with a strong command of state management tools like Redux, Zustand, and React Query. I'm highly experienced with asynchronous data handling, SSR/SSG, and real-time updates via tools like WebSockets and Socket.io",
-      "p2": "Throughout my career, I’ve contributed to and led frontend development on a wide range of applications - from internal enterprise dashboards to real-time platforms and public-facing products - working with varied architectures such as monoliths, micro-frontends, and modular design systems. I've worked both independently and in collaboration with backend, design, and product teams, adapting quickly to different workflows and team dynamics",
-      "p3": "I’m passionate about clean, type-safe, and maintainable code, and I constantly aim to improve performance, developer experience, and code structure. Whether it's optimizing rendering, reducing bundle size, refactoring for clarity, or implementing scalable patterns, I approach problems with a balance of technical precision and pragmatic decision-making"
+      "p1": "I'm an experienced Frontend Developer with a deep focus on building scalable, high-performance web applications using modern technologies. My primary stack includes React, Next.js, and TypeScript, along with a strong command of state management tools like Redux, Zustand, and React Query. I'm highly experienced with asynchronous data handling, SSR/SSG, and real-time updates via tools like WebSockets and Socket.io.",
+      "p2": "Throughout my career, I’ve contributed to and led frontend development on a wide range of applications - from internal enterprise dashboards to real-time platforms and public-facing products - working with varied architectures such as monoliths, micro-frontends, and modular design systems. I've worked both independently and in collaboration with backend, design, and product teams, adapting quickly to different workflows and team dynamics.",
+      "p3": "I’m passionate about clean, type-safe, and maintainable code, and I constantly aim to improve performance, developer experience, and code structure. Whether it's optimizing rendering, reducing bundle size, refactoring for clarity, or implementing scalable patterns, I approach problems with a balance of technical precision and pragmatic decision-making."
     },
     "resume": {
       "h1": {
@@ -88,8 +88,8 @@
               "description": "Software for collecting, managing and approving expenses to generate final invoices for clients and reconcile operational expenses",
               "tech-stack": [
                 "TypeScript",
-                "NextJs",
                 "React",
+                "NextJs",
                 "TailwindCSS",
                 "Shadcn",
                 "React Hook Form",
@@ -209,8 +209,8 @@
               "description": "B2C web application for a company specializing in informational services",
               "tech-stack": [
                 "TypeScript",
-                "NextJs",
                 "React",
+                "NextJs",
                 "TailwindCSS",
                 "Shadcn",
                 "React Hook Form",
@@ -261,9 +261,9 @@
                 "Axios"
               ],
               "achievements": [
-                "Participated in migrating a legacy Backbone.js application to React 17, modernizing the frontend stack.",
-                "Helped develop a shared UI component library with Storybook integration to improve consistency and reusability.",
-                "Contributed to team quality through code reviews and mentoring of junior developers."
+                "Participated in migrating a legacy Backbone.js application to React 17, modernizing the frontend stack",
+                "Helped develop a shared UI component library with Storybook integration to improve consistency and reusability",
+                "Contributed to team quality through code reviews and mentoring of junior developers"
               ],
               "summarized-achievements": [
                 "Participated in the migration of the application from Backbone.js to React 17",
@@ -283,9 +283,9 @@
     },
     "about-me": {
       "h1": "Привет, Я Сами!",
-      "p1": "Я фронтенд-разработчик с многолетним опытом в создании сложных и производительных веб-приложений. Основной стек - React, Next.js и TypeScript. В работе активно использую современные подходы к управлению состоянием (Redux, Zustand, React Query), умею эффективно работать с асинхронными процессами, SSR/SSG, а также real-time обновления (WebSocket, socket.io)",
-      "p2": "За свою карьеру принимал участие в разработке различных проектов: от внутренних корпоративных платформ до публичных сервисов и high-load приложений. Работал с разными архитектурами - монолитами, микрофронтендами, разделёнными слоями, а также с дизайном гибких и переиспользуемых UI-систем. Имею опыт как самостоятельной разработки с нуля, так и тесного взаимодействия в мультидисциплинарных командах",
-      "p3": "Особое внимание уделяю чистоте и читаемости кода, оптимизации производительности и удобству поддержки. Всегда стараюсь строить решения с прицелом на масштабирование, гибкость и комфорт как для пользователей, так и для команды разработки"
+      "p1": "Я фронтенд-разработчик с многолетним опытом в создании сложных и производительных веб-приложений. Основной стек - React, Next.js и TypeScript. В работе активно использую современные подходы к управлению состоянием (Redux, Zustand, React Query), умею эффективно работать с асинхронными процессами, SSR/SSG, а также real-time обновления (WebSocket, socket.io).",
+      "p2": "За свою карьеру принимал участие в разработке различных проектов: от внутренних корпоративных платформ до публичных сервисов и high-load приложений. Работал с разными архитектурами - монолитами, микрофронтендами, разделёнными слоями, а также с дизайном гибких и переиспользуемых UI-систем. Имею опыт как самостоятельной разработки с нуля, так и тесного взаимодействия в мультидисциплинарных командах.",
+      "p3": "Особое внимание уделяю чистоте и читаемости кода, оптимизации производительности и удобству поддержки. Всегда стараюсь строить решения с прицелом на масштабирование, гибкость и комфорт как для пользователей, так и для команды разработки."
     },
     "resume": {
       "h1": {
@@ -365,8 +365,8 @@
               "description": "ПО для сбора, мониторинга и согласования расходов для формирования конечного счета клиентам",
               "tech-stack": [
                 "TypeScript",
-                "NextJs",
                 "React",
+                "NextJs",
                 "TailwindCSS",
                 "Shadcn",
                 "React Hook Form",
@@ -486,8 +486,8 @@
               "description": "B2C веб-приложение компании, специализирующейся на информационных услугах",
               "tech-stack": [
                 "TypeScript",
-                "NextJs",
                 "React",
+                "NextJs",
                 "TailwindCSS",
                 "Shadcn",
                 "React Hook Form",
@@ -538,9 +538,9 @@
                 "Axios"
               ],
               "achievements": [
-                "Участвовал в миграции легаси-приложения с Backbone.js на React 17, обновляя фронтенд-стек.",
-                "Принимал участие в разработке общей библиотеки компонентов с интеграцией Storybook для повышения единообразия и повторного использования.",
-                "Повышал качество команды через код-ревью и наставничество младших разработчиков."
+                "Участвовал в миграции легаси-приложения с Backbone.js на React 17, обновляя фронтенд-стек",
+                "Принимал участие в разработке общей библиотеки компонентов с интеграцией Storybook для повышения единообразия и повторного использования",
+                "Повышал качество команды через код-ревью и наставничество младших разработчиков"
               ],
               "summarized-achievements": [
                 "Миграция приложения с Backbone.js на React 17",
