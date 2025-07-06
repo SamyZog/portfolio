@@ -5,6 +5,7 @@ import { IconChevronsRight } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Link from "next/link";
+import Script from "next/script";
 import type { PropsWithChildren } from "react";
 
 import { FontToggle } from "@/components/font-toggle";
@@ -129,6 +130,20 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
         </LocaleProvider>
       </body>
       <GoogleTagManager gtmId="G-NLE3S9XNBJ" />
+      <Script src="/metrics/yaMetrika.js" />
+      <noscript>
+        <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://mc.yandex.ru/watch/103213439"
+            style={{
+              position: "absolute",
+              left: "-9999px",
+            }}
+            alt=""
+          />
+        </div>
+      </noscript>
     </html>
   );
 };
