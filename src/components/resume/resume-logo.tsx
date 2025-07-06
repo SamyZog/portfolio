@@ -1,5 +1,7 @@
 import { Path, StyleSheet, Svg } from "@react-pdf/renderer";
 
+import { resumeTheme } from "@/constants/resume-theme";
+
 const styles = StyleSheet.create({
   logo: {
     width: 30,
@@ -9,7 +11,11 @@ const styles = StyleSheet.create({
 
 export const ResumeLogo = () => {
   return (
-    <Svg style={styles.logo} viewBox="0 0 512 512" fill="#FAFAFA">
+    <Svg
+      style={styles.logo}
+      viewBox="0 0 512 512"
+      fill={resumeTheme.background}
+    >
       <Path d="M512 208H408V421H512V208Z" />
       <Path d="M104 43H0L1.86211e-05 256H104V43Z" />
       <Path d="M0 0L256 75.786V181.195L0 105.409V0Z" />

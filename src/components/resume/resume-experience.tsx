@@ -1,15 +1,19 @@
-import { StyleSheet, Text, View } from "@react-pdf/renderer";
+import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { Fragment } from "react";
 
+import { resumeTheme } from "@/constants/resume-theme";
 import type { Locale } from "@/i18n/config";
 import translations from "@/i18n/translations.json";
 
-const darkColor = "#0b0809";
-
 export const styles = StyleSheet.create({
   divider: {
-    borderBottomColor: darkColor,
+    borderBottomColor: resumeTheme.foreground,
     borderBottomWidth: 1,
+  },
+  links: {
+    textDecoration: "underline",
+    color: resumeTheme.foreground,
+    fontWeight: "bold",
   },
 });
 
@@ -22,11 +26,12 @@ export const ResumeExperience = ({ locale }: { locale: Locale }) => {
         .slice(0, resumeText.resume.companies.length - 1)
         .map((entry) => {
           return (
-            <View key={entry.company} style={{ fontSize: 11 }}>
+            <View key={entry.company} style={{ fontSize: 10 }}>
               <View
                 style={{
                   flexDirection: "row",
                   justifyContent: "space-between",
+                  fontSize: 12,
                 }}
               >
                 <Text style={{ fontWeight: "bold" }}>
@@ -51,15 +56,22 @@ export const ResumeExperience = ({ locale }: { locale: Locale }) => {
                           {project.meta.map((meta) => {
                             return (
                               <Fragment key={meta.name}>
-                                <Text style={{ fontWeight: "bold" }}>
-                                  {meta.name}
-                                </Text>
+                                {meta.website.href ? (
+                                  <Link
+                                    style={styles.links}
+                                    href={meta.website.href}
+                                  >
+                                    {meta.name}
+                                  </Link>
+                                ) : (
+                                  <Text>{meta.name}</Text>
+                                )}
                               </Fragment>
                             );
                           })}
                         </View>
 
-                        <Text style={{ marginBottom: 8 }}>
+                        <Text style={{ marginVertical: 8 }}>
                           {project.description}
                         </Text>
 
