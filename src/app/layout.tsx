@@ -96,7 +96,10 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
 
               <section className="flex-1 relative">
                 <Sheet key={locale}>
-                  <SheetTrigger className="fixed top-0 left-0 bg-background p-1 md:hidden">
+                  <SheetTrigger
+                    className="fixed top-0 left-0 bg-background p-1 md:hidden"
+                    aria-label="menu-button"
+                  >
                     <IconChevronsRight />
                   </SheetTrigger>
                   <SheetContent side="left" className="!w-auto pt-5">
@@ -119,7 +122,7 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
                   </div>
 
                   <Link href={paths.home} className="size-10 md:hidden">
-                    <Logo className="size-20 mb-5 mx-auto" />
+                    <Logo className="size-20 mb-5 mx-auto" aria-label="logo" />
                   </Link>
                 </div>
 
