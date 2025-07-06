@@ -18,8 +18,8 @@ export const MobileNavMenu = ({ fontSize }: { fontSize: string }) => {
   const { translations } = useTranslation();
 
   return (
-    <header className="p-5">
-      <nav className="md:hidden pb-10">
+    <header className="md:hidden p-5">
+      <nav className="pb-10">
         <div className="flex items-center gap-2">
           <div className="ml-auto flex items-center justify-self-end">
             <ThemeSwitcher />
