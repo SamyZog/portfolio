@@ -95,7 +95,7 @@
                   }
                 }
               ],
-              "company-background": "Gazprombank Autoleasing is a specialized leasing company providing vehicle finance leasing services",
+              "company-background": "Gazprom Autoleasing is a specialized leasing company that provides vehicle leasing services for small and medium-sized businesses",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -267,7 +267,7 @@
         {
           "company": "Coin32",
           "location": "Moscow",
-          "website": "",
+          "website": "https://coin32.com",
           "period": ["10-2021", "07-2022"],
           "role": "Front End Developer",
           "projects": [
@@ -405,7 +405,7 @@
                   }
                 }
               ],
-              "company-background": "Лизинговая компания Газпромбанк Автолизинг",
+              "company-background": "Газпромбанк Автолизинг - компания предоставляющая услуги лизинга автотранспорта для представителей малого и среднего бизнеса",
               "description": "Создал ключевые функции микрофронтенда для совместного осмотра транспортных средств с обновлениями в реальном времени и типизированными API",
               "tech-stack": [
                 "TypeScript",
@@ -577,7 +577,7 @@
         {
           "company": "Coin32",
           "location": "Москва",
-          "website": "",
+          "website": "https://coin32.com",
           "period": ["10.2021", "07.2022"],
           "role": "Фронтенд Разработчик",
           "projects": [

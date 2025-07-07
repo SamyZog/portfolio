@@ -1,4 +1,4 @@
 export const resumeTheme = {
-  foreground: "#27272a",
+  foreground: "#171717",
   background: "#e4e4e7",
 };

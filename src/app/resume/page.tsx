@@ -2,12 +2,10 @@ import { IconExternalLink, IconEye } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { Fragment } from "react";
 
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
 import { Separator } from "@/components/separator";
-import { Skeleton } from "@/components/skeleton";
 import { paths } from "@/constants/paths";
 import { getTranslations, getUserLocale } from "@/i18n/locale";
 import seo from "@/i18n/seo.json";
@@ -15,10 +13,7 @@ import { cn } from "@/utils/cn";
 
 const DownloadPDF = dynamic(
   () => import("@/components/download-pdf").then((mod) => mod.DownloadPDF),
-  {
-    ssr: !!false,
-    loading: () => <Skeleton className="h-7 w-32" />,
-  },
+  { ssr: !!false },
 );
 
 export const generateMetadata = async (): Promise<Metadata> => {
@@ -75,13 +70,13 @@ const Page = async () => {
 
       <br />
 
-      <div className="[&_a]:underline">
+      <ol className="[&_a]:underline">
         {companies.map(
           ({ company, location, period, role, website, projects }, idx) => {
             const isFirst = idx === 0;
 
             return (
-              <Fragment key={company}>
+              <li key={company}>
                 <h2
                   id={company}
                   className={cn(
@@ -89,8 +84,7 @@ const Page = async () => {
                     !isFirst && "mt-10",
                   )}
                 >
-                  {role}
-                  {company && !website && <div>{company}</div>}
+                  {role} {company && !website && company}
                   {company && website && (
                     <a
                       href={website}
@@ -104,10 +98,10 @@ const Page = async () => {
                   )}
                 </h2>
 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1">
+                <div className="flex items-center justify-between text-muted-foreground">
+                  <p>
                     <i>({location})</i>
-                  </div>
+                  </p>
                   <div className="flex items-center gap-1">
                     <p>{period[0]}</p> <div>-</div> <p>{period[1]}</p>
                   </div>
@@ -130,46 +124,46 @@ const Page = async () => {
                                 key={name}
                                 className="flex items-center gap-2 font-bold"
                               >
-                                {name}
-                                {website.href && (
-                                  <>
-                                    <div>-</div>
-                                    <i>
-                                      <a
-                                        href={website.href}
-                                        target="_blank"
-                                        className="flex items-center gap-1 w-fit"
-                                      >
-                                        {website.label}
+                                {website.href ? (
+                                  <a
+                                    href={website.href}
+                                    target="_blank"
+                                    className="flex items-baseline gap-1 w-fit"
+                                  >
+                                    {name}
 
-                                        <IconExternalLink className="size-4" />
-                                      </a>
-                                    </i>
-                                  </>
+                                    <IconExternalLink className="size-4" />
+                                  </a>
+                                ) : (
+                                  name
                                 )}
                               </h3>
                             );
                           })}
 
-                          <p className="mt-1">{rest["company-background"]}</p>
+                          <i className="mt-1 text-muted-foreground">
+                            {rest["company-background"]}
+                          </i>
 
                           <ul className="flex gap-1 items-center flex-wrap my-5">
                             {rest["tech-stack"].map((tech) => {
                               return (
-                                <li key={tech}>
-                                  <Badge>{tech}</Badge>
-                                </li>
+                                <Badge
+                                  asChild
+                                  key={tech}
+                                  className="text-muted-foreground border-2"
+                                >
+                                  <li>{tech}</li>
+                                </Badge>
                               );
                             })}
                           </ul>
 
-                          <p>
-                            <i>{description}</i>
-                          </p>
+                          <p className="ml-5">{description}</p>
 
                           <br />
 
-                          <ol>
+                          <ul>
                             {achievements.map((achievement) => {
                               return (
                                 <li
@@ -180,17 +174,17 @@ const Page = async () => {
                                 </li>
                               );
                             })}
-                          </ol>
+                          </ul>
                         </li>
                       );
                     },
                   )}
                 </ol>
-              </Fragment>
+              </li>
             );
           },
         )}
-      </div>
+      </ol>
     </article>
   );
 };

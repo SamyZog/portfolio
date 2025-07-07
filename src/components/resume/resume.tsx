@@ -125,9 +125,11 @@ export const Resume = ({ locale }: { locale: Locale }) => {
             {resumeText.resume.companies.map((entry) => {
               return (
                 <Fragment key={entry.company}>
-                  <Text style={{ fontWeight: "bold", marginTop: 15 }}>
-                    {entry.company} - {entry.role} | ({entry.period[0]} -{" "}
-                    {entry.period[1] || "Present"})
+                  <Text
+                    style={{ fontWeight: "bold", marginTop: 15, fontSize: 15 }}
+                  >
+                    {entry.company} - {entry.role} | {entry.period[0]} -{" "}
+                    {entry.period[1] || "Present"}
                   </Text>
 
                   {entry.projects.map((project) => {
@@ -159,7 +161,7 @@ export const Resume = ({ locale }: { locale: Locale }) => {
                         </View>
 
                         <Text style={{ marginTop: 5, fontWeight: "bold" }}>
-                          ({project.period[0]} - {project.period[1]})
+                          {project.period[0]} - {project.period[1]}
                         </Text>
 
                         <Text style={{ fontWeight: "bold", marginTop: 5 }}>
