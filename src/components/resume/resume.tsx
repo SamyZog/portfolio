@@ -112,12 +112,12 @@ export const Resume = ({ locale }: { locale: Locale }) => {
               {resumeText["about-me"].section}
             </Text>
 
-            <Text>{resumeText["about-me"].p1}</Text>
+            <Text style={{ fontSize: 11 }}>{resumeText["about-me"].p1}</Text>
           </View>
 
           <View style={styles.divider} />
 
-          <View>
+          <View style={{ fontSize: 11 }}>
             <Text style={{ fontWeight: "bold", fontSize: 14 }}>
               {resumeText.resume.section}
             </Text>
@@ -169,10 +169,16 @@ export const Resume = ({ locale }: { locale: Locale }) => {
                         </Text>
 
                         {project["summarized-achievements"].map(
-                          (achievement, idx) => {
+                          (achievement, idx, arr) => {
+                            const isFirst = idx === 0;
+                            const isLast = idx === arr.length - 1;
+
                             return (
                               <Text
-                                style={{ marginTop: idx === 0 ? 5 : 1 }}
+                                style={{
+                                  marginTop: isFirst ? 5 : 1,
+                                  marginBottom: isLast ? 10 : 0,
+                                }}
                                 key={achievement}
                               >
                                 • {achievement}
