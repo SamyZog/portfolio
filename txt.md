@@ -1,3 +1,0 @@
-- Participated in migrating a legacy Backbone.js application to React 17, modernizing the frontend stack.
-- Helped develop a shared UI component library with Storybook integration to improve consistency and reusability.
-- Contributed to team quality through code reviews and mentoring of junior developers.

@@ -5,12 +5,14 @@
       "resume": "resume"
     },
     "about-me": {
+      "section": "Summary",
       "h1": "Hello, I'm Samy!",
       "p1": "I'm an experienced Frontend Developer with a deep focus on building scalable, high-performance web applications using modern technologies. My primary stack includes React, Next.js, and TypeScript, along with a strong command of state management tools like Redux, Zustand, and React Query. I'm highly experienced with asynchronous data handling, SSR/SSG, and real-time updates via tools like WebSockets and Socket.io.",
       "p2": "Throughout my career, I’ve contributed to and led frontend development on a wide range of applications - from internal enterprise dashboards to real-time platforms and public-facing products - working with varied architectures such as monoliths, micro-frontends, and modular design systems. I've worked both independently and in collaboration with backend, design, and product teams, adapting quickly to different workflows and team dynamics.",
       "p3": "I’m passionate about clean, type-safe, and maintainable code, and I constantly aim to improve performance, developer experience, and code structure. Whether it's optimizing rendering, reducing bundle size, refactoring for clarity, or implementing scalable patterns, I approach problems with a balance of technical precision and pragmatic decision-making."
     },
     "resume": {
+      "section": "Work Experience",
       "h1": {
         "title": "Resume",
         "action": "Download PDF",
@@ -21,10 +23,11 @@
           "company": "KOTELOV",
           "location": "Moscow",
           "website": "https://kotelovglobals.com/",
-          "period": ["2022-07", "present"],
+          "period": ["07-2022", "present"],
           "role": "Front End Engineer",
           "projects": [
             {
+              "period": ["11-2022", "present"],
               "meta": [
                 {
                   "name": "GPBA",
@@ -42,7 +45,6 @@
                 }
               ],
               "company-background": "Gazprom Autoleasing is a specialized leasing company that provides vehicle leasing services for small and medium-sized businesses",
-              "description": "Web platform for a vehicle leasing company, enabling users to place bids on vehicles and providing employees with a dashboard to manage and publish listings",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -58,23 +60,78 @@
                 "Vite",
                 "Orval"
               ],
+              "description": "Built a high-performance auto-bidding platform with Next.js and dual user/admin interfaces",
               "achievements": [
-                "Built key components of a real-time bidding system using Socket.IO",
-                "Integrated the frontend with the server REST API using React Query",
-                "Contributed to the development of complex multi-step forms for lot publishing with React Hook Form, featuring conditional fields, dynamic form validation schemas, and autosave functionality",
-                "Applied rendering performance techniques for large, data-intensive views using virtualization, memoization, and profiling tools (React DevTools Profiler, Chrome DevTools)",
-                "Contributed to frontend architecture decisions, including SSR/SSG setup with Nextjs, modular state architecture, and component composition best practices",
-                "Built a responsive analytics dashboard with animated charts (Recharts) and advanced metrics tracking",
-                "Developed and maintained a reusable component library, published as a private npm package, used accross 3 internal projects",
-                "Actively participated in code reviews, mentoring and cross-team technical documentation"
+                "Contributed to frontend architecture, shaping data fetching strategies (SSR/CSR), routing, and scalable state patterns for 3+ deployments",
+                "Created a shared React + Emotion component library with multi-theme support, published as an internal package bundled with Vite and used in 3 company products, cutting UI dev time by ~50%",
+                "Managed global state with Zustand, optimizing re-renders and ensuring smooth updates in real-time bidding and user settings, boosting performance by 25%",
+                "Engineered complex dynamic forms with React Hook Form + Yup; supported conditional logic and nested schemas, cutting user errors by 50%",
+                "Developed a responsive analytics dashboard using Recharts and React Query, visualizing 7+ metrics and reducing redundant requests by 60%",
+                "Built real-time update system with Socket.IO and React Query cache invalidation; ensured sub-200ms UI refresh for auction data",
+                "Automated API client generation with Orval + TypeScript, covering 100+ endpoints, reducing API bugs by 80% and improving dev speed",
+                "Optimized builds with Webpack and Vite, achieving 35% smaller bundles and halving build times",
+                "Led code reviews and mentored junior devs, improving code quality and reducing review time by 20%"
               ],
               "summarized-achievements": [
-                "Developed critical features of a real-time bidding platform, including dynamic multi-step forms, responsive analytics dashboards, and high-performance UI components using React, Next.js, and Recharts",
-                "Enhanced frontend architecture and code quality, driving improvements in state management, SSR/SSG, API integration, and creating a shared component library used across multiple projects",
-                "Collaborated closely with the team, participating in code reviews, mentoring developers, and contributing to technical documentation and architectural decisions"
+                "Shaped frontend architecture (routing, SSR/CSR, state) for scalable multi-deployment apps",
+                "Developed a reusable React + Emotion component library used in 3 products bundled with Vite; reduced UI dev time by ~50%",
+                "Managed global state with Zustand; improved re-render performance by 25% in real-time features",
+                "Built complex dynamic forms with React Hook Form + Yup; reduced user input errors by 50%",
+                "Created analytics dashboards with Recharts + React Query; cut redundant requests by 60%",
+                "Enabled sub-200ms real-time updates via Socket.IO and React Query cache invalidation",
+                "Automated API clients with Orval + TypeScript for 100+ endpoints; reduced API bugs by 80%",
+                "Optimized Webpack/Vite builds; cut bundle size by 35% and build time by 50%",
+                "Reviewed code and mentored junior devs; improved quality and reduced review time by 20%"
               ]
             },
             {
+              "period": ["08-2024", "present"],
+              "meta": [
+                {
+                  "name": "GPBA - Online Inspection",
+                  "website": {
+                    "href": "https://lc.gpbl.ru/",
+                    "label": "Demo"
+                  }
+                }
+              ],
+              "company-background": "Gazprombank Autoleasing is a specialized leasing company providing vehicle finance leasing services",
+              "tech-stack": [
+                "TypeScript",
+                "React",
+                "React Router Dom",
+                "React Hook Form",
+                "Zustand",
+                "React Query",
+                "Emotion",
+                "Vite",
+                "Orval",
+                "Microfrontend"
+              ],
+              "description": "Built key features of a collaborative vehicle inspection microfrontend with real-time updates and typed APIs",
+              "achievements": [
+                "Developed a key microfrontend module for vehicle online inspections in a large enterprise system; improved operational efficiency in daily inspection tasks",
+                "Built an internal service for inspection workflows, enabling real-time task assignment, media uploads, and structured data capture; improved field reporting accuracy by ~35%",
+                "Integrated real-time updates, dynamic form rendering (React Hook Form), and secure media upload flows; reduced submission errors by ~40% and boosted task completion rates",
+                "Managed state with Zustand and complex data fetching with React Query, delivering a highly responsive UX under heavy operational load",
+                "Used TypeScript and Orval to generate type-safe API clients; eliminated dozens of runtime errors and accelerated API integration by ~50%",
+                "Led migration from a third-party UI library to a custom Emotion-based component system; reduced tech debt and cut UI bug reports by ~50%",
+                "Refactored Vite build configs for 10+ internal packages, reducing total bundle size by 80% and significantly improving load times",
+                "Collaborated with a distributed team, adhering to microfrontend principles (modularity, independent deployments, CI/CD alignment)"
+              ],
+              "summarized-achievements": [
+                "Built microfrontend for vehicle inspections; improved efficiency in daily tasks",
+                "Engineered internal workflow service with real-time tasking and media uploads; boosted field accuracy by 35%",
+                "Implemented live updates and dynamic forms (React Hook Form); cut submission errors by 40%",
+                "Managed state with Zustand and data fetching with React Query for a highly responsive UI",
+                "Used TypeScript + Orval to generate API clients; cut integration time and runtime errors",
+                "Migrated to custom Emotion-based UI library; reduced tech debt and UI bugs by 50%",
+                "Refactored Vite configs across 10+ packages; reduced bundle size by 80% and improved load time",
+                "Worked in a distributed team using microfrontend principles for modular, CI-friendly delivery"
+              ]
+            },
+            {
+              "period": ["11-2024", "present"],
               "meta": [
                 {
                   "name": "New Tech Services (Frontier International)",
@@ -85,7 +142,6 @@
                 }
               ],
               "company-background": "New Tech Services is an international services company that provides high-tech solutions for businesses in the oil and gas industry",
-              "description": "Software for collecting, managing and approving expenses to generate final invoices for clients and reconcile operational expenses",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -99,57 +155,28 @@
                 "Axios",
                 "Orval"
               ],
+              "description": "Led front-end architecture as sole Front-End Architect for an expense management platform processing 1000+ submissions/month",
               "achievements": [
-                "Developed a complex web application for collecting, monitoring, and approving operational expenses",
-                "Implemented a dynamic form system with nested logic and validation using React Hook Form",
-                "Built scalable virtualized table components (Excel-like) to display thousands of data rows",
-                "Integrated real-time collaboration features via WebSocket communication",
-                "Owned the entire frontend architecture: routing, state management, and UI components"
+                "Built collaborative virtualized tables (1000+ rows) with React + Tailwind; enabled multi-user input via WebSocket and cut memory usage by ~50%",
+                "Built advanced forms using React Hook Form and TypeScript with complex validation and conditional logic, reducing input errors by 90%",
+                "Integrated WebSocket-based real-time collaboration with <200ms latency for multi-user editing and live updates",
+                "Designed scalable architecture with Next.js, Zustand, and a shared UI library (Shadcn)",
+                "Streamlined API integration with Orval and Axios, generating type-safe clients for 50+ endpoints and cutting dev time by 50%",
+                "Managed data fetching and caching with React Query, reducing redundant API calls by 60% and improving app responsiveness",
+                "Standardized UI with TailwindCSS and Shadcn, boosting development speed and improving design consistency"
               ],
               "summarized-achievements": [
-                "Owned the frontend architecture, implementing real-time collaboration via WebSocket and managing routing, state, and component structure end-to-end",
-                "Developed a full-featured internal web application for managing operational expenses, including data collection, monitoring, and approval workflows",
-                "Built advanced UI components, such as dynamic nested forms with validation (React Hook Form) and high-performance virtualized tables for large datasets"
+                "Developed virtualized tables (1000+ rows) with React + Tailwind",
+                "Built advanced React Hook Form system; cut input errors by 90%",
+                "Added real-time updates with WebSocket; <300ms latency",
+                "Architected scalable Next.js app with Zustand and Shadcn UI",
+                "Automated 50+ type-safe API clients with Orval + TypeScript",
+                "Used React Query to cut redundant API calls by 60%",
+                "Standardized UI with TailwindCSS; boosted development speed"
               ]
             },
             {
-              "meta": [
-                {
-                  "name": "GPBA - Online Inspection",
-                  "website": {
-                    "href": "https://lc.gpbl.ru/",
-                    "label": "Demo"
-                  }
-                }
-              ],
-              "company-background": "Gazprombank Autoleasing is a specialized leasing company providing vehicle finance leasing services",
-              "description": "A microfrontend module developed as part of a large enterprise system",
-              "tech-stack": [
-                "TypeScript",
-                "React",
-                "React Router Dom",
-                "React Hook Form",
-                "Zustand",
-                "React Query",
-                "Emotion",
-                "Vite",
-                "Orval",
-                "Microfrontend"
-              ],
-              "achievements": [
-                "Actively took part in developing an internal service for managing vehicle inspection workflows, enabling task assignment to field workers for capturing photos, documenting damages, and recording general information",
-                "Integrated real-time task updates, dynamic form rendering, and media uploads for efficient field operations",
-                "Collaborated within a distributed frontend team, adhering to microfrontend principles for independent deployment and modularity",
-                "Migrated from a third-party open-source UI library to a custom-built component library, improving maintainability and aligning with internal design requirements",
-                "Refactored and optimized build configurations across 10+ internal packages, reducing total bundle size by 80%, significantly improving load performance"
-              ],
-              "summarized-achievements": [
-                "Contributed to the development of an internal service for managing vehicle inspections, enabling field workers to capture photos, document damages, and record general data",
-                "Implemented real-time task updates, dynamic form rendering, and media upload functionality to support efficient field operations",
-                "Migrated to a custom component library and optimized build configurations across 10+ internal packages, reducing bundle size by 80% and improving overall performance"
-              ]
-            },
-            {
+              "period": ["07-2022", "10-2022"],
               "meta": [
                 {
                   "name": "TFL Logistics",
@@ -160,7 +187,6 @@
                 }
               ],
               "company-background": "TFL - one of the regional leaders in the field of logistics in the Far East",
-              "description": "B2B web application allowing clients to track shipments, view schedules, and manage transportation orders",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -171,19 +197,24 @@
                 "MUI",
                 "Vite"
               ],
+              "description": "Spearheaded front-end development as sole Architect for a B2B shipment platform",
               "achievements": [
-                "Solely responsible for the entire frontend: from architecture and design to implementation and deployment",
-                "Developed a single-page application (SPA) using React, Vite and TypeScript with modular, reusable component architecture",
-                "Two-Factor Authentication (2FA)",
-                "Implemented advanced state management using Redux Toolkit and RTK Query for seamless REST API integration",
-                "Optimized performance with code splitting, lazy loading, and Vite build tooling",
-                "Delivered a complete MVP in under 8 weeks, enabling fast onboarding for clients",
-                "Maintained stable performance for 1,000+ monthly active users"
+                "Built a high-performance SPA with React, Vite, and TypeScript; delivered a modular component system according to client guidebook that cut dev time by ~40% and improved maintainability",
+                "Implemented 2FA and access controls, protecting sensitive shipment data and ensuring secure client logins across the platform",
+                "Integrated Redux Toolkit and RTK Query for real-time REST API communication; improved state handling and reduced redundant network calls by 60%",
+                "Optimized performance using code splitting, lazy loading, and Vite plugins; reduced initial load times and enhanced responsiveness",
+                "Delivered MVP in under 8 weeks, enabling rapid onboarding and accelerating time-to-market by 2x for new client services",
+                "Maintained 99.9% UI uptime and performance stability under load, demonstrating scalable architecture and robust SPA design",
+                "Designed accessible, intuitive UIs with MUI (Material-UI); improved design consistency and boosted client usability ratings by ~30%"
               ],
               "summarized-achievements": [
-                "Solely handled the entire frontend lifecycle—from architecture and development to deployment—delivering a fully functional SPA using React, Vite, and TypeScript",
-                "Implemented advanced state management with Redux Toolkit and RTK Query, integrated REST APIs, and optimized performance using code splitting and lazy loading",
-                "Successfully launched the MVP in under 8 weeks, achieving stable performance for 1,000+ monthly users and supporting Two-Factor Authentication (2FA)"
+                "Built SPA with React, Vite, TypeScript; modular UI cut dev time by ~40%",
+                "Implemented 2FA and access controls to secure sensitive client data",
+                "Used Redux Toolkit + RTK Query to streamline real-time API communication",
+                "Optimized load speed by ~45% via code splitting and lazy loading",
+                "Delivered MVP in under 8 weeks; accelerated client onboarding 2x",
+                "Maintained 99.9% uptime and stable UI performance under high usage",
+                "Built accessible UIs with MUI; improved usability and design consistency"
               ]
             }
           ]
@@ -192,10 +223,11 @@
           "company": "NDA",
           "location": "Moscow",
           "website": "",
-          "period": ["2025-06", "2025-07"],
+          "period": ["06-2025", "07-2025"],
           "role": "Front End Engineer",
           "projects": [
             {
+              "period": ["06-2025", "07-2025"],
               "meta": [
                 {
                   "name": "NDA",
@@ -206,7 +238,7 @@
                 }
               ],
               "company-background": "",
-              "description": "B2C web application for a company specializing in informational services",
+              "description": "Engineered a B2C web application for a company specializing in informational services",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -236,10 +268,11 @@
           "company": "Coin32",
           "location": "Moscow",
           "website": "",
-          "period": ["2021-10", "2022-07"],
+          "period": ["10-2021", "07-2022"],
           "role": "Front End Developer",
           "projects": [
             {
+              "period": ["10-2021", "07-2022"],
               "meta": [
                 {
                   "name": "Coin32",
@@ -250,7 +283,7 @@
                 }
               ],
               "company-background": "Coin32 - Platform for Managing File Traffic and Software Distribution",
-              "description": "Personal account portal for file traffic monetization",
+              "description": "Assissted in creating a personal account portal for file traffic monetization platform",
               "tech-stack": [
                 "JSDoc",
                 "React",
@@ -282,12 +315,14 @@
       "resume": "резюме"
     },
     "about-me": {
+      "section": "О себе",
       "h1": "Привет, Я Сами!",
       "p1": "Я фронтенд-разработчик с многолетним опытом в создании сложных и производительных веб-приложений. Основной стек - React, Next.js и TypeScript. В работе активно использую современные подходы к управлению состоянием (Redux, Zustand, React Query), умею эффективно работать с асинхронными процессами, SSR/SSG, а также real-time обновления (WebSocket, socket.io).",
       "p2": "За свою карьеру принимал участие в разработке различных проектов: от внутренних корпоративных платформ до публичных сервисов и high-load приложений. Работал с разными архитектурами - монолитами, микрофронтендами, разделёнными слоями, а также с дизайном гибких и переиспользуемых UI-систем. Имею опыт как самостоятельной разработки с нуля, так и тесного взаимодействия в мультидисциплинарных командах.",
       "p3": "Особое внимание уделяю чистоте и читаемости кода, оптимизации производительности и удобству поддержки. Всегда стараюсь строить решения с прицелом на масштабирование, гибкость и комфорт как для пользователей, так и для команды разработки."
     },
     "resume": {
+      "section": "Опыт Работы",
       "h1": {
         "title": "Резюме",
         "action": "Скачать PDF",
@@ -302,6 +337,7 @@
           "role": "Фронтенд Разработчик",
           "projects": [
             {
+              "period": ["11.2022", "наст. время"],
               "meta": [
                 {
                   "name": "GPBA",
@@ -319,7 +355,7 @@
                 }
               ],
               "company-background": "Газпромбанк Автолизинг - компания предоставляющая услуги лизинга автотранспорта для представителей малого и среднего бизнеса",
-              "description": "Веб-платформа для компании, занимающейся лизингом транспортных средств, где пользователи могут делать ставки на автомобили, а сотрудники - управлять и публиковать лоты",
+              "description": "Создал высокопроизводительную платформу для автоматического назначения ставок на Next.js с двойным интерфейсом для пользователей и администраторов",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -336,22 +372,76 @@
                 "Orval"
               ],
               "achievements": [
-                "Разработал ключевые компоненты системы онлайн-ставок с использованием Socket.IO",
-                "Интегрировал фронтенд с серверным REST API с помощью React Query",
-                "Участвовал в разработке сложных многошаговых форм для публикации лотов с помощью React Hook Form, включая условные поля, динамисческие схемы валидации и функцию автоматического сохранения",
-                "Применял методы оптимизации рендеринга для представлений с большим объемом данных, используя виртуализацию, мемоизацию и инструменты профилирования (React DevTools Profiler, Chrome DevTools)",
-                "Участвовал в принятии архитектурных решений на фронтенде: настройка SSR/SSG с помощью Next.js, модульная архитектура состояния, применение лучших практик компонентной разработки",
-                "Разработал адаптивную аналитическую панель с графиками (Recharts) и расширенным отслеживанием метрик",
-                "Создал и поддерживал библиотеку переиспользуемых компонентов, опубликованную как приватный npm-пакет и используемую в трёх внутренних проектах",
-                "Активно участвовал в код-ревью, наставничестве и подготовке технической документации для взаимодействия между командами"
+                "Участвовал в формировании фронтенд-архитектуры, определяя стратегии получения данных (SSR/CSR), маршрутизации и масштабируемые паттерны управления состоянием для более чем 3 развертываний",
+                "Разработал общую библиотеку компонентов React + Emotion с поддержкой нескольких тем, опубликованную как внутренний пакет (сборка Vite) и используемую в 3 продуктах компании, что сократило время разработки UI примерно на 50%",
+                "Управлял глобальным состоянием с помощью Zustand, оптимизируя перерисовки и обеспечивая плавные обновления в системах торгов в реальном времени и пользовательских настройках, повысив производительность на 25%",
+                "Спроектировал сложные динамические формы с React Hook Form + Yup, поддерживая условную логику и вложенные схемы, что сократило количество пользовательских ошибок на 50%",
+                "Разработал адаптивную аналитическую панель с использованием Recharts и React Query, визуализируя более 7 метрик и сокращая избыточные запросы на 60%",
+                "Создал систему обновлений в реальном времени с Socket.IO и инвалидацией кеша React Query; обеспечил обновление UI данных аукциона менее чем за 200 мс",
+                "Автоматизировал генерацию API-клиентов с помощью Orval + TypeScript, охватив более 100 эндпоинтов, сократив количество ошибок API на 80% и ускорив разработку",
+                "Оптимизировал сборки с Webpack и Vite, достигнув уменьшения размера бандлов на 35% и сократив время сборки вдвое",
+                "Проводил ревью кода и менторил младших разработчиков, повышая качество кода и сокращая время ревью на 20%"
               ],
               "summarized-achievements": [
-                "Разработал ключевые функции платформы для онлайн-торгов в реальном времени, включая динамические многошаговые формы, адаптивную аналитическую панель и высокопроизводительные UI-компоненты с использованием React, Next.js и Recharts",
-                "Усовершенствовал фронтенд-архитектуру и качество кода, внедрив эффективное управление состоянием, SSR/SSG, интеграцию с API и создав общую компонентную библиотеку, используемую в нескольких проектах",
-                "Активно взаимодействовал с командой, участвуя в код-ревью, менторстве и разработке технической документации и архитектурных решений"
+                "Формировал фронтенд-архитектуру (маршрутизация, SSR/CSR, управление состоянием) для масштабируемых приложений с множеством развертываний",
+                "Разработал переиспользуемую библиотеку компонентов React + Emotion, используемую в 3 продуктах (сборка Vite); сократил время разработки UI примерно на 50%",
+                "Управлял глобальным состоянием с помощью Zustand; улучшил производительность повторного рендеринга на 25% в функциях реального времени",
+                "Создал сложные динамические формы с React Hook Form + Yup; сократил количество ошибок ввода данных пользователями на 50%",
+                "Создал аналитические дашборды с Recharts + React Query; уменьшил количество избыточных запросов на 60%",
+                "Реализовал обновления в реальном времени менее чем за 200 мс с помощью Socket.IO и инвалидации кэша React Query",
+                "Автоматизировал создание API-клиентов с Orval + TypeScript для более чем 100 конечных точек; сократил количество ошибок API на 80%",
+                "Оптимизировал сборки Webpack/Vite; уменьшил размер бандла на 35% и время сборки на 50%",
+                "Проводил ревью кода и менторинг младших разработчиков; улучшил качество кода и сократил время ревью на 20%"
               ]
             },
             {
+              "period": ["08.2024", "наст. время"],
+              "meta": [
+                {
+                  "name": "GPBA - Online Inspection",
+                  "website": {
+                    "href": "https://lc.gpbl.ru/",
+                    "label": "Демо"
+                  }
+                }
+              ],
+              "company-background": "Лизинговая компания Газпромбанк Автолизинг",
+              "description": "Создал ключевые функции микрофронтенда для совместного осмотра транспортных средств с обновлениями в реальном времени и типизированными API",
+              "tech-stack": [
+                "TypeScript",
+                "React",
+                "React Router Dom",
+                "React Hook Form",
+                "Zustand",
+                "React Query",
+                "Emotion",
+                "Vite",
+                "Orval",
+                "Microfrontend"
+              ],
+              "achievements": [
+                "Разработал ключевой микрофронтенд-модуль для онлайн-осмотра транспортных средств в крупной корпоративной системе; повысил операционную эффективность ежедневных инспекционных задач",
+                "Создал внутренний сервис для рабочих процессов инспекций, обеспечив назначение задач в реальном времени, загрузку медиафайлов и структурированный сбор данных; повысил точность полевых отчетов примерно на 35%",
+                "Интегрировал обновления в реальном времени, динамический рендеринг форм (React Hook Form) и безопасные потоки загрузки медиафайлов; сократил количество ошибок при отправке примерно на 40% и увеличил показатели выполнения задач",
+                "Управлял состоянием с помощью Zustand и сложной выборкой данных с помощью React Query, обеспечивая высокую скорость отклика пользовательского интерфейса при интенсивной операционной нагрузке",
+                "Использовал TypeScript и Orval для генерации типобезопасных API-клиентов; устранил десятки ошибок времени выполнения и ускорил интеграцию API примерно на 50%",
+                "Руководил миграцией со сторонней UI-библиотеки на кастомную систему компонентов на базе Emotion; сократил технический долг и уменьшил количество отчетов об ошибках UI примерно на 50%",
+                "Рефакторинг конфигураций сборки Vite для более чем 10 внутренних пакетов, что сократило общий размер бандла на 80% и значительно улучшило время загрузки",
+                "Сотрудничал с распределенной командой, придерживаясь принципов микрофронтенда (модульность, независимые развертывания, соответствие CI/CD)"
+              ],
+              "summarized-achievements": [
+                "Разработал микрофронтенд для инспекций транспортных средств; повысил эффективность ежедневных задач",
+                "Спроектировал внутренний сервис рабочих процессов с задачами в реальном времени и загрузкой медиафайлов; повысил точность полевых данных на 35%",
+                "Внедрил живые обновления и динамические формы (React Hook Form); сократил ошибки отправки на 40%",
+                "Управлял состоянием с Zustand и получением данных с React Query для высокоотзывчивого пользовательского интерфейса",
+                "Использовал TypeScript + Orval для генерации API-клиентов; сократил время интеграции и количество ошибок во время выполнения",
+                "Мигрировал на кастомную UI-библиотеку на базе Emotion; уменьшил технический долг и количество ошибок UI на 50%",
+                "Рефакторинг конфигураций Vite для более чем 10 пакетов; сократил размер бандла на 80% и улучшил время загрузки",
+                "Работал в распределенной команде, применяя принципы микрофронтенда для модульной доставки, совместимой с CI/CD"
+              ]
+            },
+            {
+              "period": ["11.2024", "наст. время"],
               "meta": [
                 {
                   "name": "New Tech Services (Frontier International)",
@@ -362,7 +452,7 @@
                 }
               ],
               "company-background": "New Tech Services - международная нефтесервисная компания, предоставляющая высокотехнологичные решения для компаний нефтегазовой отрасли",
-              "description": "ПО для сбора, мониторинга и согласования расходов для формирования конечного счета клиентам",
+              "description": "Руководил разработкой фронтенд-архитектуры платформы для управления расходами, обрабатывающей более 1000 заявок в месяц",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -377,56 +467,26 @@
                 "Orval"
               ],
               "achievements": [
-                "Разработал сложное веб-приложение для сбора, мониторинга и согласования операционных расходов",
-                "Реализовал динамическую систему форм с вложенной логикой и валидацией на базе React Hook Form",
-                "Создал масштабируемые виртуализированные таблицы (аналог Excel) для отображения тысяч строк данных",
-                "Интегрировал функциональность совместной работы в реальном времени с помощью WebSocket",
-                "Отвечал за всю архитектуру фронтенда: маршрутизацию, состояние, UI-компоненты"
+                "Разработал коллаборативные виртуализированные таблицы (более 1000 строк) с использованием React + Tailwind; обеспечил ввод данных несколькими пользователями через WebSocket и сократил потребление памяти примерно на 50%",
+                "Создал динамические формы с использованием React Hook Form и TypeScript со сложной валидацией и условной логикой, сократив количество ошибок ввода данных на 90%",
+                "Интегрировал совместную работу в реальном времени на основе WebSocket с задержкой менее 200 мс для многопользовательского редактирования и живых обновлений",
+                "Разработал масштабируемую архитектуру с использованием Next.js, Zustand и библиотеки UI (Shadcn)",
+                "Оптимизировал интеграцию API с Orval и Axios, генерируя типобезопасные клиенты для более чем 50 конечных точек и сократив время разработки на 50%",
+                "Управлял получением и кэшированием данных с помощью React Query, сократив количество избыточных вызовов API на 60% и улучшив отзывчивость приложения",
+                "Стандартизировал пользовательский интерфейс с помощью TailwindCSS и Shadcn, что ускорило разработку и улучшило согласованность дизайна"
               ],
               "summarized-achievements": [
-                "Полностью отвечал за фронтенд-архитектуру, реализовав маршрутизацию, управление состоянием, компонентную структуру и поддержку совместной работы в реальном времени через WebSocket",
-                "Разработал полнофункциональное внутреннее веб-приложение для сбора, мониторинга и согласования операционных расходов",
-                "Создал продвинутые UI-компоненты, включая динамические вложенные формы с валидацией (React Hook Form) и виртуализированные таблицы для отображения больших объемов данных"
+                "Разработал виртуализированные таблицы (более 1000 строк) с использованием React + Tailwind",
+                "Создал продвинутую систему форм на React Hook Form; сократил ошибки ввода на 90%",
+                "Внедрил обновления в реальном времени с помощью WebSocket; задержка менее 300 мс",
+                "Спроектировал масштабируемое Next.js приложение с Zustand и UI-библиотекой Shadcn",
+                "Автоматизировал создание более 50 типобезопасных API-клиентов с Orval + TypeScript",
+                "Использовал React Query для сокращения избыточных API-вызовов на 60%",
+                "Стандартизировал UI с помощью TailwindCSS; ускорил разработку"
               ]
             },
             {
-              "meta": [
-                {
-                  "name": "GPBA - Online Inspection",
-                  "website": {
-                    "href": "https://lc.gpbl.ru/",
-                    "label": "Демо"
-                  }
-                }
-              ],
-              "company-background": "Лизинговая компания Газпромбанк Автолизинг",
-              "description": "Микрофронтендный модуль, разработанный как часть крупной корпоративной системы",
-              "tech-stack": [
-                "TypeScript",
-                "React",
-                "React Router Dom",
-                "React Hook Form",
-                "Zustand",
-                "React Query",
-                "Emotion",
-                "Vite",
-                "Orval",
-                "Microfrontend"
-              ],
-              "achievements": [
-                "Активно учавствовал в разработки внутреннего сервиса для управления процессом осмотра транспортных средств: постановка задач полевым сотрудникам, загрузка фотографий, фиксация повреждений и общей информации",
-                "Реализовал поддержку реального времени, динамическую генерацию форм и загрузку медиафайлов для повышения эффективности работы на выезде",
-                "Работал в распределённой команде фронтенд-разработчиков, соблюдая принципы микрофронтендов для независимого развёртывания и модульности",
-                "Перешёл с сторонней open-source UI-библиотеки на внутреннюю компонентную библиотеку, улучшив поддержку, масштабируемость и соответствие дизайн-системе",
-                "Оптимизировал сборку более чем 10 внутренних пакетов, сократив общий размер бандла на 80% и значительно ускорив загрузку приложения"
-              ],
-              "summarized-achievements": [
-                "Участвовал в разработке внутреннего сервиса для управления осмотрами транспорта, включая загрузку фото, фиксацию повреждений и внесение общей информации полевыми сотрудниками",
-                "Реализовал обновление задач в реальном времени, динамическую отрисовку форм и загрузку медиафайлов для повышения эффективности полевых операций",
-                "Перевёл проект на собственную компонентную библиотеку и оптимизировал сборку более 10 внутренних пакетов, сократив размер бандла на 80% и улучшив производительность"
-              ]
-            },
-            {
+              "period": ["07.2022", "10.2022"],
               "meta": [
                 {
                   "name": "TFL Logistics",
@@ -437,7 +497,7 @@
                 }
               ],
               "company-background": "TFL - один из лидеров в сфере логистики на Дальнем Востоке",
-              "description": "B2B веб-приложение позволяющее клиентам отслеживать отправления, просматривать расписание и управлять транспортными заказами",
+              "description": "Руководил фронтенд-архитектурой B2B-платформы для отслеживания поставок",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -449,18 +509,22 @@
                 "Vite"
               ],
               "achievements": [
-                "Полностью отвечал за фронтенд-часть проекта: от архитектуры и дизайна до реализации и деплоя",
-                "Разработал SPA с использованием React, Vite и TypeScript, применяя модульную архитектуру и переиспользуемые компоненты",
-                "Двухфакторная аутентификация (2FA)",
-                "Реализовал управление состоянием через Redux Toolkit и RTK Query для взаимодействия с REST API",
-                "Оптимизировал производительность (code splitting, lazy loading, Vite)",
-                "Создал и запустил MVP менее чем за 8 недель, обеспечив быструю адаптацию пользователей",
-                "Обеспечил стабильную работу приложения с 1000+ активных пользователей в месяц"
+                "Разработал высокопроизводительное SPA на React, Vite и TypeScript; реализовал модульную систему компонентов в соответствии с руководством клиента, что сократило время разработки примерно на 40% и улучшило поддерживаемость",
+                "Внедрил двухфакторную аутентификацию (2FA) и контроль доступа, защитив конфиденциальные данные о поставках и обеспечив безопасный вход клиентов на платформу",
+                "Интегрировал Redux Toolkit и RTK Query для взаимодействия с REST API в реальном времени; улучшил обработку состояния и сократил количество избыточных сетевых запросов на 60%",
+                "Оптимизировал производительность с помощью разделения кода (code splitting), ленивой загрузки (lazy loading) и плагинов Vite; сократил время первоначальной загрузки и повысил отзывчивость",
+                "Выпустил MVP менее чем за 8 недель, что позволило быстро внедрять новые сервисы для клиентов и вдвое ускорить вывод на рынок",
+                "Поддерживал 99.9% бесперебойной работы пользовательского интерфейса и стабильность производительности под нагрузкой, демонстрируя масштабируемую архитектуру и надежный дизайн SPA",
+                "Разработал доступные, интуитивно понятные пользовательские интерфейсы с помощью MUI (Material-UI); улучшил согласованность дизайна и повысил оценки удобства использования клиентами примерно на 30%"
               ],
               "summarized-achievements": [
-                "Полностью отвечал за весь фронтенд: от архитектуры и разработки до деплоя, реализовав полноценное SPA с использованием React, Vite и TypeScript",
-                "Реализовал продвинутое управление состоянием через Redux Toolkit и RTK Query, интеграцию с REST API, а также оптимизацию производительности с помощью разделения кода и ленивой загрузки",
-                "Успешно выпустил MVP за 8 недель, обеспечив стабильную работу для 1 000+ активных пользователей в месяц и поддержку двухфакторной аутентификации (2FA)"
+                "Создал SPA на React, Vite, TypeScript; модульный UI сократил время разработки примерно на 40%",
+                "Внедрил двухфакторную аутентификацию (2FA) и контроль доступа для защиты конфиденциальных данных клиентов",
+                "Использовал Redux Toolkit + RTK Query для оптимизации обмена данными с API в реальном времени",
+                "Оптимизировал скорость загрузки примерно на 45% с помощью разделения кода и ленивой загрузки",
+                "Выпустил MVP менее чем за 8 недель; вдвое ускорил процесс подключения новых клиентов",
+                "Поддерживал 99.9% времени бесперебойной работы и стабильную производительность UI при высокой нагрузке",
+                "Создал доступные пользовательские интерфейсы с помощью MUI; улучшил удобство использования и согласованность дизайна"
               ]
             }
           ]
@@ -473,6 +537,7 @@
           "role": "Фронтенд Разработчик",
           "projects": [
             {
+              "period": ["06.2025", "07.2025"],
               "meta": [
                 {
                   "name": "NDA",
@@ -483,7 +548,7 @@
                 }
               ],
               "company-background": "",
-              "description": "B2C веб-приложение компании, специализирующейся на информационных услугах",
+              "description": "Разработал B2C веб-приложение для компании, специализирующейся на информационных услугах",
               "tech-stack": [
                 "TypeScript",
                 "React",
@@ -504,7 +569,7 @@
               "summarized-achievements": [
                 "Реализовал сложные динамические формы с условной логикой, валидацией и кастомной обработкой ошибок для улучшения взаимодействия с пользователем",
                 "Использовал виртуализированные списки для эффективной обработки больших объемов данных, обеспечивая высокую производительность даже на слабых устройствах",
-                "Тесно сотрудничал с дизайнерами и бэкенд-разработчиками для интеграции API и поддержки консистентного интерфейса во всём приложении"
+                "Сотрудничал с дизайнерами и бэкенд-разработчиками для интеграции API и поддержки консистентного интерфейса во всём приложении"
               ]
             }
           ]
@@ -517,6 +582,7 @@
           "role": "Фронтенд Разработчик",
           "projects": [
             {
+              "period": ["10.2021", "07.2022"],
               "meta": [
                 {
                   "name": "Coin32",
@@ -527,7 +593,7 @@
                 }
               ],
               "company-background": "Coin32 - платформа для работы с файловым трафиком и дистрибуции ПО",
-              "description": "Личный кабинет на портале монетизации файлового трафика",
+              "description": "Учавствовал в разработке личного кабинета на портале монетизации файлового трафика",
               "tech-stack": [
                 "JSDoc",
                 "React",

@@ -22,27 +22,24 @@ export const ResumeExperience = ({ locale }: { locale: Locale }) => {
 
   return (
     <View style={{ gap: 10 }}>
+      <Text
+        style={{ fontSize: 12, fontWeight: "bold" }}
+        id={resumeText.resume.section}
+      >
+        {resumeText.resume.section}
+      </Text>
+
       {resumeText.resume.companies
         .slice(0, resumeText.resume.companies.length - 1)
         .map((entry) => {
           return (
             <View key={entry.company} style={{ fontSize: 10 }}>
-              <View
-                style={{
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  fontSize: 12,
-                }}
-              >
-                <Text style={{ fontWeight: "bold" }}>
-                  {entry.company} - {entry.role}
-                </Text>
-                <Text>
-                  {entry.period[0]} - {entry.period[1]}
-                </Text>
-              </View>
-
-              <View style={styles.divider} />
+              <Text style={{ fontWeight: "bold" }}>
+                {entry.company} - {entry.role}
+              </Text>
+              <Text>
+                {entry.period[0]} - {entry.period[1]}
+              </Text>
 
               <View style={{ gap: 10 }}>
                 {entry.projects.map((project, idx) => {

@@ -1,19 +1,20 @@
 import {
   Document,
   Font,
+  Link,
   Page,
   StyleSheet,
   Text,
   View,
 } from "@react-pdf/renderer";
 import path from "path";
+import { Fragment } from "react";
 
 import { resumeTheme } from "@/constants/resume-theme";
 import type { Locale } from "@/i18n/config";
 import resume from "@/i18n/resume.json";
 import translations from "@/i18n/translations.json";
 
-import { ResumeExperience } from "./resume-experience";
 import { ResumeLogo } from "./resume-logo";
 import { ResumeSocial } from "./resume-social";
 
@@ -47,22 +48,17 @@ export const styles = StyleSheet.create({
     backgroundColor: resumeTheme.background,
     fontFamily: "Roboto Condensed",
     fontSize: 10,
-  },
-  mainSection: {
-    width: "100%",
-    gap: 12,
     color: resumeTheme.foreground,
+    padding: 16,
   },
   divider: {
     borderBottomColor: resumeTheme.foreground,
     borderBottomWidth: 1,
   },
-  title: {
-    fontSize: 20,
+  links: {
+    textDecoration: "underline",
+    color: resumeTheme.foreground,
     fontWeight: "bold",
-  },
-  aboutMe: {
-    fontSize: 12,
   },
 });
 
@@ -80,62 +76,121 @@ export const Resume = ({ locale }: { locale: Locale }) => {
       language={locale}
     >
       <Page size="A4" style={styles.page}>
-        <View style={styles.mainSection}>
+        <View style={{ gap: 10 }}>
           <View
             style={{
               backgroundColor: resumeTheme.foreground,
-              color: resumeTheme.background,
-              padding: 16,
-              paddingBottom: 10,
+              padding: 10,
+              flexDirection: "row",
               gap: 10,
+              fontSize: 16,
+              alignItems: "center",
             }}
           >
-            <View
-              style={{
-                flexDirection: "row",
-                gap: 10,
-                alignItems: "center",
-              }}
-            >
-              <ResumeLogo />
+            <ResumeLogo />
 
-              <Text style={styles.title}>
-                {text.name} - {text.position}
-              </Text>
-            </View>
-
-            <View
-              wrap
-              style={{
-                fontSize: 9,
-                alignItems: "center",
-                flexDirection: "row",
-                gap: 10,
-              }}
-            >
-              <ResumeSocial />
-            </View>
+            <Text style={{ color: resumeTheme.background, fontWeight: "bold" }}>
+              {text.name} - {text.position}
+            </Text>
           </View>
 
-          <View style={{ padding: 16, paddingTop: 0 }}>
-            <View style={{ paddingBottom: 10 }}>
-              <Text style={styles.aboutMe}>{resumeText["about-me"].p1}</Text>
-            </View>
+          <View
+            wrap
+            style={{
+              gap: 10,
+              fontSize: 10,
+              alignItems: "center",
+              flexDirection: "row",
+              backgroundColor: resumeTheme.background,
+            }}
+          >
+            <ResumeSocial />
+          </View>
 
-            <View style={{ flexDirection: "row", gap: 1 }}>
-              {text.keywords.map((word) => {
-                return (
-                  <Text
-                    style={{ fontSize: 1, color: resumeTheme.background }}
-                    key={word}
-                  >
-                    {word}
+          <View style={{ flexDirection: "column", gap: 10 }}>
+            <Text style={{ fontWeight: "bold", fontSize: 14 }}>
+              {resumeText["about-me"].section}
+            </Text>
+
+            <Text>{resumeText["about-me"].p1}</Text>
+          </View>
+
+          <View style={styles.divider} />
+
+          <View>
+            <Text style={{ fontWeight: "bold", fontSize: 14 }}>
+              {resumeText.resume.section}
+            </Text>
+
+            {resumeText.resume.companies.map((entry) => {
+              return (
+                <Fragment key={entry.company}>
+                  <Text style={{ fontWeight: "bold", marginTop: 15 }}>
+                    {entry.company} - {entry.role} | ({entry.period[0]} -{" "}
+                    {entry.period[1] || "Present"})
                   </Text>
-                );
-              })}
-            </View>
-            <ResumeExperience locale={locale} />
+
+                  {entry.projects.map((project) => {
+                    return (
+                      <View key={project.description} wrap={false}>
+                        <View
+                          style={{
+                            flexDirection: "row",
+                            marginTop: 5,
+                            gap: 5,
+                          }}
+                        >
+                          {project.meta.map((meta) => {
+                            return (
+                              <Fragment key={meta.name}>
+                                {meta.website.href ? (
+                                  <Link
+                                    style={styles.links}
+                                    href={meta.website.href}
+                                  >
+                                    {meta.name}
+                                  </Link>
+                                ) : (
+                                  <Text>{meta.name}</Text>
+                                )}
+                              </Fragment>
+                            );
+                          })}
+                        </View>
+
+                        <Text style={{ marginTop: 5, fontWeight: "bold" }}>
+                          ({project.period[0]} - {project.period[1]})
+                        </Text>
+
+                        <Text style={{ fontWeight: "bold", marginTop: 5 }}>
+                          {project.description}
+                        </Text>
+
+                        {project["summarized-achievements"].map(
+                          (achievement, idx) => {
+                            return (
+                              <Text
+                                style={{ marginTop: idx === 0 ? 5 : 1 }}
+                                key={achievement}
+                              >
+                                • {achievement}
+                              </Text>
+                            );
+                          },
+                        )}
+                      </View>
+                    );
+                  })}
+                </Fragment>
+              );
+            })}
           </View>
+
+          {/* <View style={styles.divider} />
+
+          <View style={{ flexDirection: "row", fontSize: 5 }}>
+            <Text>{text.keywords.join(", ")}</Text>
+          </View> */}
         </View>
       </Page>
     </Document>
