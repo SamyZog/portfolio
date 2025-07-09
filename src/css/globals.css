@@ -118,4 +118,8 @@
   body {
     @apply bg-background text-foreground selection:bg-foreground selection:text-background;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }

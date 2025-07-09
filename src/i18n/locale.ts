@@ -21,7 +21,7 @@ export const setUserLocale = async (locale: Locale) => {
 export const toggleLocale = async () => {
   const currentLocale = await getUserLocale();
 
-  setUserLocale(currentLocale === "en" ? "ru" : "en");
+  await setUserLocale(currentLocale === "en" ? "ru" : "en");
 };
 
 export const getTranslations = async () => {
