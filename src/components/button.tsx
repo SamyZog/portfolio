@@ -57,7 +57,8 @@ function Button({
       data-slot="button"
       className={cn(
         buttonVariants({ variant, size, className }),
-        loading && "text-transparent relative select-none",
+        loading &&
+          "text-transparent relative select-none duration-200 transition-colors",
       )}
       {...props}
       disabled={isDisabled}
