@@ -1,4 +1,4 @@
-export type Locale = (typeof locales)[number];
+import type { Locale } from "@/types/helpers";
 
-export const locales = ["en", "ru"] as const;
+export const locales: Locale[] = ["en", "ru"];
 export const defaultLocale: Locale = "en";

@@ -10,7 +10,6 @@ import { MobileNavMenu } from "@/components/mobile-nav-menu";
 import { font } from "@/constants/fonts";
 import { getUserLocale } from "@/i18n/locale";
 import seo from "@/i18n/seo.json";
-import { LocaleProvider } from "@/providers/locale-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 
 import { NavMenu } from "../components/nav-menu";
@@ -89,18 +88,16 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
       <body
         className={`${font.className} antialiased min-h-screen overflow-x-hidden`}
       >
-        <LocaleProvider locale={locale}>
-          <ThemeProvider>
-            <MobileNavMenu fontSize={fontSize} />
-            <main className="realtive flex items-baseline max-w-4xl mx-auto gap-10 py-10 px-5">
-              <aside className="sticky top-10 md:block hidden">
-                <NavMenu fontSize={fontSize} />
-              </aside>
+        <ThemeProvider>
+          <MobileNavMenu fontSize={fontSize} locale={locale} />
+          <main className="realtive flex items-baseline max-w-4xl mx-auto gap-10 py-10 px-5">
+            <aside className="sticky top-10 md:block hidden">
+              <NavMenu fontSize={fontSize} locale={locale} />
+            </aside>
 
-              <section className="flex-1 relative">{children}</section>
-            </main>
-          </ThemeProvider>
-        </LocaleProvider>
+            <section className="flex-1 relative">{children}</section>
+          </main>
+        </ThemeProvider>
       </body>
       <GoogleTagManager gtmId="G-NLE3S9XNBJ" />
       <Script src="/metrics/yaMetrika.js" />

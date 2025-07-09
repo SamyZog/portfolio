@@ -21,6 +21,7 @@ const NotFound = async () => {
         width={320}
         height={180}
         className="rounded-lg overflow-hidden object-contain"
+        unoptimized
       />
 
       <Button variant="destructive" asChild>

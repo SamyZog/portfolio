@@ -1,20 +1,15 @@
 import { IconExternalLink, IconEye } from "@tabler/icons-react";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { Badge } from "@/components/badge";
 import { Button } from "@/components/button";
+import { DownloadPDF } from "@/components/download-pdf";
 import { Separator } from "@/components/separator";
 import { paths } from "@/constants/paths";
 import { getTranslations, getUserLocale } from "@/i18n/locale";
 import seo from "@/i18n/seo.json";
 import { cn } from "@/utils/cn";
-
-const DownloadPDF = dynamic(
-  () => import("@/components/download-pdf").then((mod) => mod.DownloadPDF),
-  { ssr: !!false },
-);
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const locale = await getUserLocale();
@@ -56,10 +51,7 @@ const Page = async () => {
           <DownloadPDF locale={locale}>{h1.action}</DownloadPDF>
 
           <Button asChild>
-            <Link
-              href={`${paths["resume-preview"]}?lang=${locale}`}
-              target="_blank"
-            >
+            <Link href={`${paths["resume-preview"]}/${locale}`} target="_blank">
               {h1.preview}
 
               <IconEye />

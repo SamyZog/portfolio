@@ -2,8 +2,8 @@ import { Link, StyleSheet, Text, View } from "@react-pdf/renderer";
 import { Fragment } from "react";
 
 import { resumeTheme } from "@/constants/resume-theme";
-import type { Locale } from "@/i18n/config";
 import translations from "@/i18n/translations.json";
+import type { WithLocale } from "@/types/helpers";
 
 export const styles = StyleSheet.create({
   divider: {
@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
   },
 });
 
-export const ResumeExperience = ({ locale }: { locale: Locale }) => {
+export const ResumeExperience = ({ locale }: WithLocale) => {
   const resumeText = translations[locale];
 
   return (

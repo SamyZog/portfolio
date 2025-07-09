@@ -1,31 +1,41 @@
 "use client";
 
-import { PDFDownloadLink } from "@react-pdf/renderer";
 import { IconDownload } from "@tabler/icons-react";
 import { type PropsWithChildren } from "react";
 
-import type { Locale } from "@/i18n/config";
+import type { WithLocale } from "@/types/helpers";
 
 import { Button } from "./button";
-import { Resume } from "./resume";
 
 export const DownloadPDF = ({
   locale,
   children,
-}: PropsWithChildren & { locale: Locale }) => {
+}: PropsWithChildren & WithLocale) => {
   const fileName =
-    locale === "en" ? "Resume_Samy_Zogeyb" : "Резюме_Сами_Зогейб";
+    locale === "en" ? "Resume Samy Zogeyb" : "Резюме Сами Зогейб";
 
   return (
-    <Button asChild>
-      <PDFDownloadLink
-        document={<Resume locale={locale} />}
-        fileName={fileName}
-      >
-        {children}
+    <Button
+      onClick={async () => {
+        const pdf = (await import("@react-pdf/renderer")).pdf;
+        const Resume = (await import("./resume")).Resume;
 
-        <IconDownload className="size-3" />
-      </PDFDownloadLink>
+        const blob = await pdf(<Resume locale={locale} />).toBlob();
+
+        if (blob) {
+          const link = document.createElement("a");
+          link.href = URL.createObjectURL(blob);
+          link.download = fileName;
+          document.body.append(link);
+          link.click();
+          link.remove();
+          // in case the Blob uses a lot of memory
+          setTimeout(() => URL.revokeObjectURL(link.href), 7000);
+        }
+      }}
+    >
+      {children}
+      <IconDownload className="size-3" />
     </Button>
   );
 };

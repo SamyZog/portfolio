@@ -1,21 +1,18 @@
-"use client";
-
 import { memo } from "react";
 
 import { setUserLocale } from "@/i18n/locale";
-import { useTranslation } from "@/providers/locale-provider";
+import type { WithLocale } from "@/types/helpers";
 
 import { Button } from "./button";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "./dropdown-menu";
 
-const LocaleSwitcherComponent = () => {
-  const { locale } = useTranslation();
-
+const LocaleSwitcherComponent = ({ locale }: WithLocale) => {
   const displayedLocale = locale === "en" ? "en" : "ру";
 
   return (
@@ -24,12 +21,16 @@ const LocaleSwitcherComponent = () => {
         <Button variant="outline">{displayedLocale}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent loop collisionPadding={20} className="min-w-10">
-        <DropdownMenuItem onClick={() => setUserLocale("ru")}>
-          русский
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setUserLocale("en")}>
-          english
-        </DropdownMenuItem>
+        <DropdownMenuRadioGroup
+          onValueChange={setUserLocale as (v: string) => void}
+        >
+          <DropdownMenuRadioItem className="pl-2" value="ru">
+            русский
+          </DropdownMenuRadioItem>
+          <DropdownMenuRadioItem className="pl-2" value="en">
+            english
+          </DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
   );

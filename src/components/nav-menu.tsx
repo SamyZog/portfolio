@@ -1,23 +1,20 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { paths } from "@/constants/paths";
-import { useTranslation } from "@/providers/locale-provider";
+import type { WithLocale } from "@/types/helpers";
 
-import { Button } from "./button";
 import { FontToggle } from "./font-toggle";
 import { LocaleSwitcher } from "./locale-switcher";
 import { Logo } from "./logo";
+import { NavLinks } from "./nav-links";
 import { Separator } from "./separator";
 import { SocialLinks } from "./social-links";
 import { ThemeSwitcher } from "./theme-switcher";
 
-export const NavMenu = ({ fontSize }: { fontSize: string }) => {
-  const pathName = usePathname();
-  const { translations } = useTranslation();
-
+export const NavMenu = ({
+  fontSize,
+  locale,
+}: { fontSize: string } & WithLocale) => {
   return (
     <nav className="w-20">
       <div className="flex justify-center w-full">
@@ -26,30 +23,7 @@ export const NavMenu = ({ fontSize }: { fontSize: string }) => {
         </Link>
       </div>
 
-      <ol className="grid gap-1 mt-10">
-        <li className="w-full">
-          <Button
-            asChild
-            variant={pathName === paths.home ? "secondary" : "ghost"}
-            className="flex items-center gap-2 w-full"
-          >
-            <Link href={paths.home}>
-              {translations["nav-links"]["about-me"]}
-            </Link>
-          </Button>
-        </li>
-
-        <li>
-          <Button
-            asChild
-            variant={pathName === paths.resume ? "secondary" : "ghost"}
-          >
-            <Link href={paths.resume} className="flex items-center gap-2">
-              {translations["nav-links"].resume}
-            </Link>
-          </Button>
-        </li>
-      </ol>
+      <NavLinks locale={locale} />
 
       <Separator className="my-5" />
 
@@ -68,7 +42,7 @@ export const NavMenu = ({ fontSize }: { fontSize: string }) => {
 
         <div className="flex items-center justify-between w-full">
           <ThemeSwitcher />
-          <LocaleSwitcher />
+          <LocaleSwitcher locale={locale} />
         </div>
       </div>
     </nav>

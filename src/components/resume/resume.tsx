@@ -11,9 +11,9 @@ import path from "path";
 import { Fragment } from "react";
 
 import { resumeTheme } from "@/constants/resume-theme";
-import type { Locale } from "@/i18n/config";
 import resume from "@/i18n/resume.json";
 import translations from "@/i18n/translations.json";
+import type { WithLocale } from "@/types/helpers";
 
 import { ResumeLogo } from "./resume-logo";
 import { ResumeSocial } from "./resume-social";
@@ -62,7 +62,7 @@ export const styles = StyleSheet.create({
   },
 });
 
-export const Resume = ({ locale }: { locale: Locale }) => {
+export const Resume = ({ locale }: WithLocale) => {
   const text = resume[locale];
   const resumeText = translations[locale];
 
