@@ -68,7 +68,7 @@ export const Resume = ({ locale }: WithLocale) => {
 
   return (
     <Document
-      keywords={text.keywords.join(",")}
+      keywords={text.keywords.join(" ")}
       author={text.name}
       creationDate={new Date()}
       subject={text.subject}
