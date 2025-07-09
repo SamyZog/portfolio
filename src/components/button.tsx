@@ -1,3 +1,4 @@
+import { IconLoader2 } from "@tabler/icons-react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { Slot } from "radix-ui";
 import * as React from "react";
@@ -40,19 +41,33 @@ function Button({
   variant,
   size,
   asChild = false,
+  loading,
+  children,
   ...props
 }: React.ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
+    loading?: boolean;
   }) {
   const Comp = asChild ? Slot.Root : "button";
+  const isDisabled = loading || props.disabled;
 
   return (
     <Comp
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(
+        buttonVariants({ variant, size, className }),
+        loading && "text-transparent relative select-none",
+      )}
       {...props}
-    />
+      disabled={isDisabled}
+    >
+      <Slot.Slottable>{children}</Slot.Slottable>
+
+      {loading && (
+        <IconLoader2 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 animate-spin text-foreground" />
+      )}
+    </Comp>
   );
 }
 
