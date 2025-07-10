@@ -128,11 +128,11 @@ export const Resume = ({ locale }: WithLocale) => {
                   <Text
                     style={{ fontWeight: "bold", marginTop: 15, fontSize: 15 }}
                   >
-                    {entry.company} - {entry.role} | {entry.period[0]} -{" "}
+                    {entry.role} - {entry.company} | {entry.period[0]} -{" "}
                     {entry.period[1] || "Present"}
                   </Text>
 
-                  {entry.projects.map((project) => {
+                  {entry.projects.map((project, _, arr) => {
                     return (
                       <View key={project.description} wrap={false}>
                         <View
@@ -153,16 +153,25 @@ export const Resume = ({ locale }: WithLocale) => {
                                     {meta.name}
                                   </Link>
                                 ) : (
-                                  <Text>{meta.name}</Text>
+                                  <Text
+                                    style={{
+                                      fontWeight: "bold",
+                                    }}
+                                  >
+                                    {meta.name}
+                                  </Text>
                                 )}
                               </Fragment>
                             );
                           })}
                         </View>
 
-                        <Text style={{ marginTop: 5, fontWeight: "bold" }}>
-                          {project.period[0]} - {project.period[1]}
-                        </Text>
+                        {arr.length > 1 && (
+                          <Text style={{ marginTop: 5, fontWeight: "bold" }}>
+                            {project.role} ({project.period[0]} -{" "}
+                            {project.period[1]})
+                          </Text>
+                        )}
 
                         <Text style={{ fontWeight: "bold", marginTop: 5 }}>
                           {project.description}

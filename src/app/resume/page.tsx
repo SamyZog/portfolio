@@ -1,4 +1,4 @@
-import { IconExternalLink, IconEye } from "@tabler/icons-react";
+import { IconArrowUpRight, IconEye } from "@tabler/icons-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -7,8 +7,9 @@ import { Button } from "@/components/button";
 import { DownloadPDF } from "@/components/download-pdf";
 import { Separator } from "@/components/separator";
 import { paths } from "@/constants/paths";
-import { getTranslations, getUserLocale } from "@/i18n/locale";
+import { getUserLocale } from "@/i18n/locale";
 import seo from "@/i18n/seo.json";
+import translations from "@/i18n/translations.json";
 import { cn } from "@/utils/cn";
 
 export const generateMetadata = async (): Promise<Metadata> => {
@@ -38,14 +39,14 @@ export const generateMetadata = async (): Promise<Metadata> => {
 };
 
 const Page = async () => {
-  const { translations, locale } = await getTranslations();
+  const locale = await getUserLocale();
 
-  const { companies, h1 } = translations.resume;
+  const { companies, h1 } = translations[locale].resume;
 
   return (
     <article className="flex-1">
       <div className="flex items-center justify-between gap-2">
-        <h1 className="text-2xl">{h1.title}</h1>
+        <h1 className="text-4xl font-bold">{h1.title}</h1>
 
         <div className="flex gap-2 flex-wrap justify-end">
           <DownloadPDF locale={locale}>{h1.action}</DownloadPDF>
@@ -71,21 +72,14 @@ const Page = async () => {
               <li key={company}>
                 <h2
                   id={company}
-                  className={cn(
-                    "text-xl flex items-center gap-2 font-bold",
-                    !isFirst && "mt-10",
-                  )}
+                  className={cn("text-xl font-bold", !isFirst && "mt-10")}
                 >
                   {role} {company && !website && company}
                   {company && website && (
-                    <a
-                      href={website}
-                      target="_blank"
-                      className="flex items-center gap-1 w-fit"
-                    >
+                    <a href={website} target="_blank" className="w-fit">
                       {company}
 
-                      <IconExternalLink className="size-4" />
+                      <IconArrowUpRight className="size-4 inline align-baseline" />
                     </a>
                   )}
                 </h2>
@@ -95,7 +89,9 @@ const Page = async () => {
                     <i>({location})</i>
                   </p>
                   <div className="flex items-center gap-1">
-                    <p>{period[0]}</p> <div>-</div> <p>{period[1]}</p>
+                    <p>
+                      {period[0]} <span>-</span> {period[1]}
+                    </p>
                   </div>
                 </div>
 
@@ -105,31 +101,47 @@ const Page = async () => {
 
                 <ol className="grid gap-10">
                   {projects?.map(
-                    ({ achievements, description, meta, ...rest }) => {
+                    ({
+                      achievements,
+                      description,
+                      meta,
+                      period,
+                      role,
+                      ...rest
+                    }) => {
                       return (
                         <li key={description}>
                           {meta?.map(({ name, website }) => {
                             if (!name || !website) return null;
 
                             return (
-                              <h3
-                                key={name}
-                                className="flex items-center gap-2 font-bold"
-                              >
-                                {website.href ? (
-                                  <a
-                                    href={website.href}
-                                    target="_blank"
-                                    className="flex items-baseline gap-1 w-fit"
-                                  >
-                                    {name}
+                              <>
+                                <h3
+                                  key={name}
+                                  className="flex items-center gap-2 font-bold"
+                                >
+                                  {website.href ? (
+                                    <a
+                                      href={website.href}
+                                      target="_blank"
+                                      className="w-fit"
+                                    >
+                                      {name}
 
-                                    <IconExternalLink className="size-4" />
-                                  </a>
-                                ) : (
-                                  name
-                                )}
-                              </h3>
+                                      <IconArrowUpRight className="size-4 inline align-baseline" />
+                                    </a>
+                                  ) : (
+                                    name
+                                  )}
+                                </h3>
+
+                                <div className="my-2">
+                                  <p>
+                                    {role} ({period[0]} <span>-</span>{" "}
+                                    {period[1]})
+                                  </p>
+                                </div>
+                              </>
                             );
                           })}
 

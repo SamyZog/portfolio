@@ -30,20 +30,14 @@
               "period": ["11-2022", "present"],
               "meta": [
                 {
-                  "name": "GPBA",
+                  "name": "GPBA - Auction",
                   "website": {
                     "href": "https://auction.autogpbl.ru/",
                     "label": "Demo"
                   }
-                },
-                {
-                  "name": "GPBA Admin",
-                  "website": {
-                    "href": "https://admin-auto.gpbl.ru/",
-                    "label": "Demo"
-                  }
                 }
               ],
+              "role": "Front End Engineer",
               "company-background": "Gazprom Autoleasing is a specialized leasing company that provides vehicle leasing services for small and medium-sized businesses",
               "tech-stack": [
                 "TypeScript",
@@ -108,6 +102,7 @@
                 "Orval",
                 "Microfrontend"
               ],
+              "role": "Front End Engineer",
               "description": "Built key features of a collaborative vehicle inspection microfrontend with real-time updates and typed APIs",
               "achievements": [
                 "Developed a key microfrontend module for vehicle online inspections in a large enterprise system; improved operational efficiency in daily inspection tasks",
@@ -141,6 +136,7 @@
                   }
                 }
               ],
+              "role": "Lead Front End Developer",
               "company-background": "New Tech Services is an international services company that provides high-tech solutions for businesses in the oil and gas industry",
               "tech-stack": [
                 "TypeScript",
@@ -186,6 +182,7 @@
                   }
                 }
               ],
+              "role": "Lead Front End Developer",
               "company-background": "TFL - one of the regional leaders in the field of logistics in the Far East",
               "tech-stack": [
                 "TypeScript",
@@ -224,7 +221,7 @@
           "location": "Moscow",
           "website": "",
           "period": ["06-2025", "07-2025"],
-          "role": "Front End Engineer",
+          "role": "Lead Front End Developer",
           "projects": [
             {
               "period": ["06-2025", "07-2025"],
@@ -237,6 +234,7 @@
                   }
                 }
               ],
+              "role": "Lead Front End Developer",
               "company-background": "",
               "description": "Engineered a B2C web application for a company specializing in informational services",
               "tech-stack": [
@@ -282,6 +280,7 @@
                   }
                 }
               ],
+              "role": "Front End Developer",
               "company-background": "Coin32 - Platform for Managing File Traffic and Software Distribution",
               "description": "Assissted in creating a personal account portal for file traffic monetization platform",
               "tech-stack": [
@@ -340,20 +339,14 @@
               "period": ["11.2022", "наст. время"],
               "meta": [
                 {
-                  "name": "GPBA",
+                  "name": "GPBA - Аукцион",
                   "website": {
                     "href": "https://auction.autogpbl.ru/",
                     "label": "Демо"
                   }
-                },
-                {
-                  "name": "GPBA Admin",
-                  "website": {
-                    "href": "https://admin-auto.gpbl.ru/",
-                    "label": "Демо"
-                  }
                 }
               ],
+              "role": "Фронтенд Разработчик",
               "company-background": "Газпромбанк Автолизинг - компания предоставляющая услуги лизинга автотранспорта для представителей малого и среднего бизнеса",
               "description": "Создал высокопроизводительную платформу для автоматического назначения ставок на Next.js с двойным интерфейсом для пользователей и администраторов",
               "tech-stack": [
@@ -398,13 +391,14 @@
               "period": ["08.2024", "наст. время"],
               "meta": [
                 {
-                  "name": "GPBA - Online Inspection",
+                  "name": "GPBA - Онлайн Осмотр",
                   "website": {
                     "href": "https://lc.gpbl.ru/",
                     "label": "Демо"
                   }
                 }
               ],
+              "role": "Фронтенд Разработчик",
               "company-background": "Газпромбанк Автолизинг - компания предоставляющая услуги лизинга автотранспорта для представителей малого и среднего бизнеса",
               "description": "Создал ключевые функции микрофронтенда для совместного осмотра транспортных средств с обновлениями в реальном времени и типизированными API",
               "tech-stack": [
@@ -451,6 +445,7 @@
                   }
                 }
               ],
+              "role": "Ведущий Фронтенд Разработчик",
               "company-background": "New Tech Services - международная нефтесервисная компания, предоставляющая высокотехнологичные решения для компаний нефтегазовой отрасли",
               "description": "Руководил разработкой фронтенд-архитектуры платформы для управления расходами, обрабатывающей более 1000 заявок в месяц",
               "tech-stack": [
@@ -496,6 +491,7 @@
                   }
                 }
               ],
+              "role": "Ведущий Фронтенд Разработчик",
               "company-background": "TFL - один из лидеров в сфере логистики на Дальнем Востоке",
               "description": "Руководил фронтенд-архитектурой B2B-платформы для отслеживания поставок",
               "tech-stack": [
@@ -534,7 +530,7 @@
           "location": "Москва",
           "website": "",
           "period": ["06.2025", "07.2025"],
-          "role": "Фронтенд Разработчик",
+          "role": "Ведущий Фронтенд Разработчик",
           "projects": [
             {
               "period": ["06.2025", "07.2025"],
@@ -547,6 +543,7 @@
                   }
                 }
               ],
+              "role": "Ведущий Фронтенд Разработчик",
               "company-background": "",
               "description": "Разработал B2C веб-приложение для компании, специализирующейся на информационных услугах",
               "tech-stack": [
@@ -592,6 +589,7 @@
                   }
                 }
               ],
+              "role": "Фронтенд Разработчик",
               "company-background": "Coin32 - платформа для работы с файловым трафиком и дистрибуции ПО",
               "description": "Учавствовал в разработке личного кабинета на портале монетизации файлового трафика",
               "tech-stack": [

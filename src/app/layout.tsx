@@ -1,9 +1,8 @@
 import "@/css/globals.css";
 
-import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import { cookies } from "next/headers";
-import Script from "next/script";
 import type { PropsWithChildren } from "react";
 
 import { MobileNavMenu } from "@/components/mobile-nav-menu";
@@ -13,6 +12,11 @@ import seo from "@/i18n/seo.json";
 import { ThemeProvider } from "@/providers/theme-provider";
 
 import { NavMenu } from "../components/nav-menu";
+
+const Metrics = dynamic(
+  () => import("@/components/metrics").then((mod) => mod.Metrics),
+  { ssr: !!false },
+);
 
 export const generateMetadata = async (): Promise<Metadata> => {
   const locale = await getUserLocale();
@@ -70,37 +74,21 @@ const RootLayout = async ({ children }: PropsWithChildren) => {
 
   return (
     <html lang={locale} suppressHydrationWarning style={{ fontSize }}>
-      <head>
-        <noscript>
-          <div>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://mc.yandex.ru/watch/103213439"
-              style={{
-                position: "absolute",
-                left: "-9999px",
-              }}
-              alt=""
-            />
-          </div>
-        </noscript>
-      </head>
+      <Metrics />
+
       <body
         className={`${font.className} antialiased min-h-screen overflow-x-hidden`}
       >
         <ThemeProvider>
           <MobileNavMenu fontSize={fontSize} locale={locale} />
+
           <main className="realtive flex items-baseline max-w-4xl mx-auto gap-10 py-10 px-5">
-            <aside className="sticky top-10 md:block hidden">
-              <NavMenu fontSize={fontSize} locale={locale} />
-            </aside>
+            <NavMenu fontSize={fontSize} locale={locale} />
 
             <section className="flex-1 relative">{children}</section>
           </main>
         </ThemeProvider>
       </body>
-      <GoogleTagManager gtmId="G-NLE3S9XNBJ" />
-      <Script src="/metrics/yaMetrika.js" />
     </html>
   );
 };
